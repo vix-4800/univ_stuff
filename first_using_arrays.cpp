@@ -1,9 +1,6 @@
 #include <array>
-#include <cstdio>
-#include <cstdlib>
 #include <iostream>
 #include <cmath>
-#include <math.h>
 #include <vector>
 
 using std::vector;
