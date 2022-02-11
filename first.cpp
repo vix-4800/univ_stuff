@@ -3,8 +3,6 @@
 #include <iostream>
 #include <cmath>
 
-using std::cout; using std::endl;
-
 int N = 2;
 
 void task1(int *src_arr){
