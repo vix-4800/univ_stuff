@@ -1,2 +1,3 @@
-## No need to look in this repo, it's just for me
-Nothing to see here, pass by...
+## Main branch
+Using 'standart' and 'basic' stuff, i.e standart arrays x[];
+not using std::vector, std::array, std::string etc.
