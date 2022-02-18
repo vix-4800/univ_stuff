@@ -3,42 +3,59 @@
 #include <iostream>
 #include <cmath>
 #include <ostream>
-#include "vector"
+#include <vector>
 
-using std::cin;
-using std::endl;
-using std::cout;
+using std::cin; using std::cout; using std::endl;
+using std::vector;
+using std::pair;
 
-int find_sin(){
-    return 0;
+// get range from a user
+int* get_coords(int *coords){
+    int x1, x2;
+
+    cout << "Range\nX1: ";
+    cin >> x1;
+
+    cout << "X2: ";
+    cin >> x2;
+
+    coords[0] = x1;
+    coords[1] = x2;
+
+    return coords;
 }
 
-void output(int width = 80, int height = 20){
-    cout << width << ' ' <<  height << endl;
-    cout << endl;
+// calculate all values within specified range
+vector<pair<int,double>> calc_values(int x1 = -5, int x2 = 5){
+    vector<pair<int,double>> res;
+    for (int i = x1; i <= x2; i++)
+        res.push_back(std::make_pair(i,sin(i)));        
 
-    for (size_t i = 0; i < height; i++) {
-        if (i == height/2)
+    return res;
+}
+
+void output(const vector<pair<int,double>> values, const int x1 = -5, const int x2 = 5, const int width = 60, const float height = 1){
+    for (float i = 0; i <= height+0.1; i+=0.05) {
+        if (fabs(i - height/2) > 0.00001)
         {
             for (size_t k = 0; k < width/2; k++)
-                cout << '-';
-                
+                cout << ' ';
+
             cout << '|';
 
             for (size_t k = width/2; k < width; k++)
-                cout << '-';
-            
+                cout << ' ';
+
             cout << endl;
         }
-        else
-        {
+        else {
             for (size_t k = 0; k < width/2; k++)
-                cout << ' ';
+                cout << '-';
 
-            cout << '|';
+            cout << '*';
 
             for (size_t k = width/2; k < width; k++)
-                cout << ' ';
+                cout << '-';
 
             cout << endl;
         }
@@ -48,25 +65,13 @@ void output(int width = 80, int height = 20){
 }
 
 int main(int argc, char *argv[]){
-    if (argc == 1)
-        output();
-    else if (argc == 2 && std::isdigit(*argv[1])){
-        cout << *argv[1] << endl;
-        output(*argv[1]);
-    }
-        
-    else if (argc == 3 && std::isdigit(*argv[1]) && std::isdigit(*argv[2])){
-        cout << *argv[1] << ' ' <<  *argv[2] << endl;
-        output(*argv[1], *argv[2]);
-    }
-        
-    else {
-        cout << "Excessive amount of arguments or invalid value(s) was(were) specified\n";
-        cout << "Syntax:\n\t./sin.cpp [width] [height]\n";
-        cout << "Examples:\n\t./sin.cpp\n\t./sin.cpp 75\n\t./sin.cpp 60 15" << endl;
-        exit(1);
-    }
-    
-    cout << endl;
+    int range[2];
+    get_coords(range);
+
+    vector<pair<int,double>> points;
+    points = calc_values();
+
+    output(points);
+
     return EXIT_SUCCESS;
 }
