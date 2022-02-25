@@ -117,9 +117,9 @@ int main(){
                             9,4,0,3
                          }; // answer - 973
 
-    cout << "The determinant equals: " << fint_determinant(second) << endl;
-    cout << "The determinant equals: " << fint_determinant(third) << endl;
-    cout << "The determinant equals: " << fint_determinant(fourth) << endl;
+    cout << "The determinant is " << fint_determinant(second) << endl;
+    cout << "The determinant is " << fint_determinant(third) << endl;
+    cout << "The determinant is " << fint_determinant(fourth) << endl;
 
     return EXIT_SUCCESS;
 }
