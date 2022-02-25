@@ -1,3 +1,2 @@
 ## Web branch
-This is where all my web projects are stored
-Here I learn HTML and CSS
+This is where all my web projects (HTML and CSS) are stored<br>
