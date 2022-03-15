@@ -128,6 +128,7 @@ char disclaimer(string filename){
     cout << "Thus it is highly recommended to run it in an empty folder\n";
     cout << "to avoid potential loss of your data\n\nFiles that will be edited: " << filename << "\n" << std::flush;
 
+    // Time to read the previous message
     #ifdef _WIN32
         Sleep(2*1000);
     #endif
