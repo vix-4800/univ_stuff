@@ -4,9 +4,9 @@
 #include <string>
 
 #ifdef _WIN32
-#include <Windows.h>
+    #include <Windows.h>
 #else
-#include <unistd.h>
+    #include <unistd.h>
 #endif
 
 using std::cout;
@@ -23,13 +23,30 @@ int file_creation(string filename){
     std::ofstream file;
     file.open(filename);
     if(file){
-        Sleep(500);
+        #ifdef _WIN32
+            Sleep(500);
+        #endif
+
         cout << "Created successfully\n";
 
-        // Text to be written
-        string message;
-        cout << "Text to be written to the file (end with '\\'): ";
-        std::getline(std::cin, message, '\\'); // Example: hello there stranger\
+        string message; // Text to be written
+        cout << "Enter your own text or use predefined (1/2)?\n";
+        int r;
+        std::cin >> r;
+        switch (r){
+            case 1:
+                cout << "Text to be written to the file (end with '\\'): ";
+                std::getline(std::cin, message, '\\'); // Example: hello there stranger\
+                
+                break;
+            case 2:
+                message = "Why, Mr. Anderson? Why, why, why? Why do you do it?\nWhy? Why get up? Why keep fighting? Do you believe you're fighting for something?\nFor more than your survival? Can you tell me what it is?\nDo you even know?";
+                break;
+            default:
+                cout << "Wrong input!" << endl;
+                return EXIT_FAILURE;
+                break;
+            }
         
         file << message << endl;
 
@@ -83,7 +100,11 @@ int file_info(string filename){
     std::stringstream stream_2;
     stream_2 << "The file contains " << lines_c << " line(s), " << words_c << " word(s) and " << spaces_c << " whitespace(s)";
     string info = stream_2.str();
-    Sleep(500);
+
+    #ifdef _WIN32
+        Sleep(500);
+    #endif
+
     cout << info;
     file_r.close();
 
@@ -91,7 +112,11 @@ int file_info(string filename){
     std::ofstream file_a;
     file_a.open(filename, std::ios_base::app);
     file_a << '\n' << info << endl;
-    Sleep(500);
+
+    #ifdef _WIN32
+        Sleep(500);
+    #endif
+
     cout << "\nWritten" << endl;
     file_a.close();
 
@@ -103,8 +128,11 @@ char disclaimer(string filename){
     cout << "Thus it is highly recommended to run it in an empty folder\n";
     cout << "to avoid potential loss of your data\n\nFiles that will be edited: " << filename << "\n" << std::flush;
 
+    #ifdef _WIN32
+        Sleep(2*1000);
+    #endif
+
     char k;
-    Sleep(2*1000);
     cout << "Do you wish to proceed? (y/n)" << endl;
     std::cin >> k;
 
@@ -121,7 +149,10 @@ int main(){
             if( file_creation(filename) == 1 )
                 exit(1);
             
-            Sleep(500);
+            #ifdef _WIN32
+                Sleep(500);
+            #endif
+
             cout << "Now let's get some info about this file" << endl;
             if ( file_info(filename) == 1 )
                 exit(1);
