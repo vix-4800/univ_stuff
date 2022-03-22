@@ -1,0 +1,41 @@
+body {
+    position: relative;
+    width: 1920px;
+    height: 3737px;
+    background: #FFFFFF;
+}
+
+header {
+    position: absolute;
+    height: 793px;
+    left: 0px;
+    top: 0px;
+}
+
+.features {
+    position: absolute;
+    height: 802px;
+    left: 0px;
+    top: 644px;
+}
+
+.how_we_work {
+    position: absolute;
+    width: 2204.07px;
+    height: 1821px;
+    left: 0px;
+    top: 1334px;
+}
+
+footer {
+    position: absolute;
+    width: 1921px;
+    height: 61px;
+    left: 0px;
+    top: 3676px;
+}
+
+.menu {
+    width: 1170px;
+    height: 40px;
+}
