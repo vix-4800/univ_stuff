@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
+@font-face {
+    font-family: "Balqis";
+    src: url("../fonts/Balqis/Balqis.otf");
+    src: url("../fonts/Balqis/Balqis.eot") format('embedded-opentype'),
+         url('../fonts/Balqis/Balqis.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 1920px;
+    height: 7782px;
+}
+
+header {
+    background-image: url("../img/header/background.jpg");
+    height: 1080px;
+}
+
+.title {color: #000000; }
+
+.title .main_title{
+    width: 1074px;
+    height: 264px;
+    font-family: 'Balqis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 250px;
+    line-height: 334px;
+}
+
+.title .side_title {
+    width: 427px;
+    height: 66px;
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 66px;
+}
+
+footer {
+    background-image: url("../img/footer/background.jpg");
+    height: 1180px;
+}
