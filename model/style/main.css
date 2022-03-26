@@ -23,48 +23,54 @@ body {
     height: 7782px;
     width: 1920px;
 }
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+	color: black;
+}
+button {
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
 
 header {
     position: relative;
     background-image: url("../img/header/background.jpg");
     height: 1080px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+nav h3 {
+    position: absolute;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    font-size: 24px;
+    line-height: 28px;
 }
 
 .route_nav_button {
-    position: absolute;
     top: 6.66%;
     left: 18.75%;
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
     text-decoration-line: underline;
-    color: #000000;
 }
 
 .hotel_nav_button {
-    position: absolute;
     top: 6.66%;
-    left: 26.25%;
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: #000000;
+    left: 26.25%;    
 }
 
 .cost_nav_button {
-    position: absolute;
     top: 6.66%;
     left: 32.03%;
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: #000000;
 }
 
 .phone_icon {
@@ -74,20 +80,8 @@ header {
 }
 
 .phone_number {
-    position: absolute;
     top: 6.66%;
     left: 71.66%;
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: #000000;
-}
-
-a {
-    text-decoration: none;
-	color: black;
 }
 
 .title {color: #000000; }
@@ -143,14 +137,6 @@ a {
     height: 700px;
 }
 
-button {
-    border: none;
-    background: none;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-}
-
 #slideshow-left {
     position: absolute;
     top: 45%;
@@ -170,7 +156,7 @@ button {
 
 .wonderland-main-title {
     position: absolute;
-    left: 18.75%;
+    left: 23.076%;
     top: 0;
     width: 330px;
     height: 125px;
@@ -185,7 +171,7 @@ button {
 .wonderland-side-title {
     position: absolute;
     top: 44.82%;
-    left: 28.17%;
+    left: 34.679%;
     width: 233px;
     height: 28px;
     font-family: 'Roboto Condensed';
@@ -217,18 +203,16 @@ button {
     height: 611px;
 }
 
-.description p {
-    overflow: hidden;
+.description span { overflow: hidden; }
+.description h4 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
 }
 
-.part_1 { height: 84px;}
-
-.part_2 { height: 84px;}
-
-.part_3 { height: 105px; }
-
-.part_4 { height: 26px; }
-
+.part_1, .part_2 { height: 84px; margin-bottom: 50px;}
+.part_3 { height: 105px; margin-bottom: 50px;}
+.part_4 { height: 26px; margin-bottom: 50px;}
 .part_5 { height: 41px; }
 
 .route {
@@ -248,8 +232,6 @@ button {
     position: relative;
     width: 600px;
     height: 1095px;
-    display: flex;
-    flex-direction: column;
 }
 
 .slideshow-container-2 {
@@ -268,22 +250,28 @@ button {
     right: 0;
 }
 
-.days-context {
+.days {
+    margin-top: 108px;
     width: 296px;
+    height: 762px;
+    display: flex;
+    flex-direction: column;
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
     line-height: 28px;
+    
+}
+
+.days-context {
+    margin-bottom: 50px;
 }
 
 .route-rest h4 {
-    width: 296px;
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 .book-button {
@@ -320,12 +308,6 @@ button {
     font-size: 24px;
     line-height: 28px;
     color: #000000;
-}
-
-.days {
-    margin-top: 108px;
-    width: 296px;
-    height: 762px;
 }
 
 .hotel {
@@ -404,14 +386,25 @@ button {
 
 .hotel-gallery {
     display: inherit;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 599px;
+    flex-flow: column;
     height: 350px;
 }
 .hotel-gallery-image {
     height: 150px;
     width: 280px;
+}
+.gallery-row-1{
+    height: 50%;
+    width: 100%;
+    display: inherit;
+    justify-content: space-between;
+}
+.gallery-row-2{
+    height: 50%;
+    width: 100%;
+    display: inherit;
+    align-items: end;
+    justify-content: space-between;
 }
 
 .cost {
@@ -438,22 +431,26 @@ button {
     font-size: 24px;
     line-height: 28px;
     color: #000000;
+    position: absolute;
+    left: 9.27%;
+    top: 18.39%;
 }
 
 .cost-first-part {
     position: relative;
     height: 560px;
+    margin-bottom: 201px;
 }
 .cost-small-balloon-1 {
     position: absolute;
-    top: 76.71%;
+    bottom: 0;
     right: 13.4%;
     width: 73px;
     height: 108px;
 }
 .cost-small-balloon-2 {
     position: absolute;
-    top: 39.89%;
+    top: 50.89%;
     right: 19%;
     width: 73px;
     height: 108px;
@@ -494,60 +491,49 @@ button {
     width: 971px;
     display: flex;
     flex-direction: row;
-}
-
-.included h4 {
     font-family: 'Roboto Condensed';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    position: absolute;
+    bottom: 0;
+}
+.included-container span {overflow: hidden;}
+
+.included-container h4 {
     font-size: 24px;
     line-height: 28px;
-    color: #000000;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
 }
 
 .included {
     width: 530px;
     margin-right: 70px;
-}
-
-.not-included h4 {
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: #000000;
+    display: inherit;
+    flex-direction: column;
 }
 
 .not-included {
     width: 371px;
+    display: inherit;
+    flex-direction: column;
 }
 
-.included-context {
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 21px;
-    color: #000000;
-}
-
-.not-included-context {
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 21px;
-    color: #000000;
+.included-context, .not-included-context { 
+    margin-bottom: 20px; 
 }
 
 .cost-second-part {
     display: flex;
     flex-direction: row;
+    padding-left: 106px;
 }
 
 .cost-second-image {
-    width: 560px;
+    width: 600px;
     margin-left: 113px;
     height: 800px;
 }
@@ -606,7 +592,7 @@ button {
     background: #FFFFFF;
     border: 1px solid #E2AB3F;
     box-sizing: border-box;
-    padding: 14px 320px 15px 31px;
+    padding: 14px 31px 15px 31px;
 }
 .submit-application-phone {
     font-family: 'Roboto Condensed';
@@ -620,7 +606,7 @@ button {
     box-sizing: border-box;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 14px 289px 15px 31px;
+    padding: 14px 215px 15px 31px;
 }
 .submit-application-button {
     font-family: 'Roboto Condensed';
@@ -640,6 +626,8 @@ footer {
     background-image: url("../img/footer/background.jpg");
     height: 1180px;
     position: relative;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 .footer-title {
@@ -690,7 +678,7 @@ footer {
 .contacts-balloon-email {
     position: absolute;
     left: 29.11%;
-    top: 29.4%;
+    top: 29.2%;
     z-index: 1;
     font-family: 'Roboto Condensed';
     font-style: normal;
