@@ -60,7 +60,8 @@ nav h3 {
 .route_nav_button {
     top: 6.66%;
     left: 18.75%;
-    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
 }
 
 .hotel_nav_button {
@@ -121,8 +122,13 @@ nav h3 {
 .wonderland-rest {
     height: 700px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .wonderland-slideshow {
@@ -195,9 +201,16 @@ nav h3 {
 }
 
 .description-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: start;
-    flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 44px;
     margin-bottom: 45px;
     height: 611px;
@@ -219,6 +232,8 @@ nav h3 {
     height: 1095px;
     width: 1560px;
     margin-left: 360px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -254,8 +269,13 @@ nav h3 {
     margin-top: 108px;
     width: 296px;
     height: 762px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 300;
@@ -283,7 +303,8 @@ nav h3 {
     padding: 11px 53px 11px 54px;
     background: #FFFFFF;
     border: 1px solid #E2AB3F;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -343,8 +364,13 @@ nav h3 {
 }
 
 .hotel-rest {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     
     height: 700px;
 }
@@ -354,8 +380,13 @@ nav h3 {
 .gallery-description {
     margin-left: 8.32%;
     display: inherit;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 701px;
     height: 700px;
 }
@@ -386,7 +417,10 @@ nav h3 {
 
 .hotel-gallery {
     display: inherit;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     height: 350px;
 }
 .hotel-gallery-image {
@@ -397,14 +431,20 @@ nav h3 {
     height: 50%;
     width: 100%;
     display: inherit;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .gallery-row-2{
     height: 50%;
     width: 100%;
     display: inherit;
-    align-items: end;
-    justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .cost {
@@ -489,8 +529,13 @@ nav h3 {
 
 .included-container {
     width: 971px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 300;
@@ -513,13 +558,19 @@ nav h3 {
     width: 530px;
     margin-right: 70px;
     display: inherit;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .not-included {
     width: 371px;
     display: inherit;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .included-context, .not-included-context { 
@@ -527,8 +578,13 @@ nav h3 {
 }
 
 .cost-second-part {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     padding-left: 106px;
 }
 
@@ -540,12 +596,19 @@ nav h3 {
 
 .cost-second-description {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 105px;
     height: 595px;
     width: 383px;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .available-date {
@@ -579,7 +642,9 @@ nav h3 {
     font-size: 24px;
     line-height: 28px;
     color: #000000;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin-bottom: 50px;
 }
 .submit-application-name {
@@ -591,7 +656,8 @@ nav h3 {
     color: #000000;
     background: #FFFFFF;
     border: 1px solid #E2AB3F;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 14px 31px 15px 31px;
 }
 .submit-application-phone {
@@ -603,7 +669,8 @@ nav h3 {
     color: #000000;
     background: #FFFFFF;
     border: 1px solid #E2AB3F;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 14px 215px 15px 31px;
@@ -617,9 +684,12 @@ nav h3 {
     text-align: center;
     background: #FFFFFF;
     border: 1px solid #E2AB3F;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 12px 45px 10px 46px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 footer {
