@@ -1,16 +1,19 @@
+
+
 @font-face {
     font-family: "Balqis";
     src: url("../fonts/Balqis/Balqis.otf");
-    src: url("../fonts/Balqis/Balqis.eot") format('embedded-opentype'),
-         url('../fonts/Balqis/Balqis.ttf') format('truetype');
+    src: url("../fonts/Balqis/Balqis.eot") format('embedded-opentype'), url('../fonts/Balqis/Balqis.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Roboto Condensed";
     src: url("../fonts/Roboto Condensed/RobotoCondensed-LightItalic.ttf");
     font-style: italic;
 }
+
 @font-face {
     font-family: "Roboto Condensed";
     src: url("../fonts/Roboto Condensed/RobotoCondensed-Light.ttf");
@@ -23,13 +26,16 @@ body {
     height: 7782px;
     width: 1920px;
 }
+
 input[type="submit"]:hover {
     cursor: pointer;
 }
+
 a {
     text-decoration: none;
-	color: black;
+    color: black;
 }
+
 button {
     border: none;
     background: none;
@@ -61,12 +67,12 @@ nav h3 {
     top: 6.66%;
     left: 18.75%;
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
 }
 
 .hotel_nav_button {
     top: 6.66%;
-    left: 26.25%;    
+    left: 26.25%;
 }
 
 .cost_nav_button {
@@ -85,9 +91,11 @@ nav h3 {
     left: 71.66%;
 }
 
-.title {color: #000000; }
+.title {
+    color: #000000;
+}
 
-.title .main_title{
+.title .main_title {
     position: absolute;
     left: 22.03%;
     top: 23.33%;
@@ -127,8 +135,8 @@ nav h3 {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
 
 .wonderland-slideshow {
@@ -205,28 +213,46 @@ nav h3 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-top: 44px;
     margin-bottom: 45px;
     height: 611px;
 }
 
-.description span { overflow: hidden; }
+.description span {
+    overflow: hidden;
+}
+
 .description h4 {
     padding: 0;
     margin: 0;
     margin-bottom: 50px;
 }
 
-.part_1, .part_2 { height: 84px; margin-bottom: 50px;}
-.part_3 { height: 105px; margin-bottom: 50px;}
-.part_4 { height: 26px; margin-bottom: 50px;}
-.part_5 { height: 41px; }
+.part_1,
+.part_2 {
+    height: 84px;
+    margin-bottom: 50px;
+}
+
+.part_3 {
+    height: 105px;
+    margin-bottom: 50px;
+}
+
+.part_4 {
+    height: 26px;
+    margin-bottom: 50px;
+}
+
+.part_5 {
+    height: 41px;
+}
 
 .route {
     height: 1095px;
@@ -274,14 +300,13 @@ nav h3 {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
     line-height: 28px;
-    
 }
 
 .days-context {
@@ -304,7 +329,7 @@ nav h3 {
     background: #FFFFFF;
     border: 1px solid #E2AB3F;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -369,30 +394,31 @@ nav h3 {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    
+    -ms-flex-direction: row;
+    flex-direction: row;
     height: 700px;
 }
 
-.hotel-main-image { width: 500px; }
+.hotel-main-image {
+    width: 500px;
+}
 
 .gallery-description {
     margin-left: 8.32%;
     display: inherit;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     width: 701px;
     height: 700px;
 }
 
 .hotel-description {
-    width: 601px; 
+    width: 601px;
     height: 271px;
 }
 
@@ -419,32 +445,35 @@ nav h3 {
     display: inherit;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
     height: 350px;
 }
+
 .hotel-gallery-image {
     height: 150px;
     width: 280px;
 }
-.gallery-row-1{
+
+.gallery-row-1 {
     height: 50%;
     width: 100%;
     display: inherit;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
-.gallery-row-2{
+
+.gallery-row-2 {
     height: 50%;
     width: 100%;
     display: inherit;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
+    -ms-flex-align: end;
+    align-items: end;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .cost {
@@ -481,6 +510,7 @@ nav h3 {
     height: 560px;
     margin-bottom: 201px;
 }
+
 .cost-small-balloon-1 {
     position: absolute;
     bottom: 0;
@@ -488,6 +518,7 @@ nav h3 {
     width: 73px;
     height: 108px;
 }
+
 .cost-small-balloon-2 {
     position: absolute;
     top: 50.89%;
@@ -495,6 +526,7 @@ nav h3 {
     width: 73px;
     height: 108px;
 }
+
 .cost-big-balloon {
     position: absolute;
     top: 21.07%;
@@ -534,8 +566,8 @@ nav h3 {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 300;
@@ -544,7 +576,10 @@ nav h3 {
     position: absolute;
     bottom: 0;
 }
-.included-container span {overflow: hidden;}
+
+.included-container span {
+    overflow: hidden;
+}
 
 .included-container h4 {
     font-size: 24px;
@@ -560,8 +595,8 @@ nav h3 {
     display: inherit;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .not-included {
@@ -569,12 +604,13 @@ nav h3 {
     display: inherit;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
-.included-context, .not-included-context { 
-    margin-bottom: 20px; 
+.included-context,
+.not-included-context {
+    margin-bottom: 20px;
 }
 
 .cost-second-part {
@@ -583,8 +619,8 @@ nav h3 {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     padding-left: 106px;
 }
 
@@ -601,14 +637,14 @@ nav h3 {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-top: 105px;
     height: 595px;
     width: 383px;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
 }
 
 .available-date {
@@ -643,10 +679,11 @@ nav h3 {
     line-height: 28px;
     color: #000000;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
     margin-bottom: 50px;
 }
+
 .submit-application-name {
     font-family: 'Roboto Condensed';
     font-style: normal;
@@ -657,9 +694,10 @@ nav h3 {
     background: #FFFFFF;
     border: 1px solid #E2AB3F;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 14px 31px 15px 31px;
 }
+
 .submit-application-phone {
     font-family: 'Roboto Condensed';
     font-style: normal;
@@ -670,11 +708,12 @@ nav h3 {
     background: #FFFFFF;
     border: 1px solid #E2AB3F;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 14px 215px 15px 31px;
 }
+
 .submit-application-button {
     font-family: 'Roboto Condensed';
     font-style: normal;
@@ -685,11 +724,11 @@ nav h3 {
     background: #FFFFFF;
     border: 1px solid #E2AB3F;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 12px 45px 10px 46px;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
 }
 
 footer {
