@@ -7,6 +7,8 @@
 
 html {
 	font-size: 1vw;
+	font-family: "Inter", sans-serif;
+	font-style: normal;
 }
 
 .bg-gray {
@@ -50,8 +52,6 @@ ul {
 }
 
 .logo-header {
-	font-family: "Inter", sans-serif;
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1.375rem;
 	line-height: 1.227em;
@@ -65,8 +65,6 @@ ul {
 	width: 12em;
 	height: 3em;
 	border-radius: 0.625em;
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1rem;
 	line-height: 1.1875em;
@@ -100,8 +98,6 @@ a:hover {
 }
 
 .menu ul a {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 500;
 	font-size: 1rem;
 	line-height: 1.1875em;
@@ -148,8 +144,6 @@ a:hover {
 .upgrade p {
 	padding: 0;
 	margin: 0 10.9375%;
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 500;
 	font-size: 1rem;
 	line-height: 1.375em;
@@ -181,8 +175,6 @@ a:hover {
 	border-radius: 0.625em;
 	align-self: center;
 	margin-bottom: 1.5em;
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1rem;
 	line-height: 1.1875em;
@@ -256,8 +248,6 @@ a:hover {
 	position: absolute;
 	top: 5%;
 	left: 3%;
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 500;
 	font-size: 1.5rem;
 	line-height: 1.208em;
@@ -267,8 +257,6 @@ a:hover {
 	position: absolute;
 	left: 3%;
 	top: 16%;
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 400;
 	font-size: 1.125rem;
 	line-height: 1.2222em;
@@ -278,8 +266,6 @@ a:hover {
 	position: absolute;
 	right: 5%;
 	top: 8%;
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 1.1875em;
@@ -300,8 +286,6 @@ a:hover {
 }
 
 .resume-course > span {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 4.75rem;
 	line-height: 1.21428em;
@@ -322,11 +306,31 @@ a:hover {
 	transition: opacity 100ms;
 }
 
+.gallery-1:hover img,
+.gallery-2:hover img,
+.gallery-3:hover img {
+	transition: filter ease-in-out 250ms;
+	filter: blur(5px);
+}
+
 .gallery-1:hover .resume-course span,
 .gallery-2:hover .resume-course span,
 .gallery-3:hover .resume-course span {
 	transform: scale(1, 1);
 	transition: transform ease-in-out 150ms;
+}
+
+.gallery-1:hover .gallery-name,
+.gallery-1:hover .gallery-lessons,
+.gallery-1:hover .gallery-duration,
+.gallery-2:hover .gallery-name,
+.gallery-2:hover .gallery-lessons,
+.gallery-2:hover .gallery-duration,
+.gallery-3:hover .gallery-name,
+.gallery-3:hover .gallery-lessons,
+.gallery-3:hover .gallery-duration {
+	transition: filter ease-in-out 250ms;
+	filter: blur(1.3px);
 }
 
 #gallery-name-2,
@@ -353,8 +357,6 @@ a:hover {
 
 input[type="text"] {
 	color: rgba(118, 132, 146, 0.8);
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 400;
 	line-height: 1.2em;
 	font-size: 1em;
@@ -379,8 +381,6 @@ input[type="text"] {
 
 .course-nav h1 {
 	width: fit-content;
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1.75rem;
 	line-height: 1.21428em;
@@ -389,8 +389,6 @@ input[type="text"] {
 }
 
 .course-nav-rest span {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1.0625rem;
 	line-height: 1.23529em;
@@ -437,8 +435,6 @@ input[type="text"] {
 }
 
 .right h1 {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1.125rem;
 	line-height: 1.22222em;
@@ -458,8 +454,6 @@ input[type="text"] {
 	padding: 0;
 	margin: 0;
 	margin-bottom: 3.0273vh;
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1.125rem;
 	line-height: 1.2222em;
@@ -471,8 +465,6 @@ input[type="text"] {
 }
 
 .upcoming-task-section-title {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 0.9375rem;
 	line-height: 1.2em;
@@ -480,8 +472,6 @@ input[type="text"] {
 }
 
 .upcoming-task-section-date {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 400;
 	font-size: 0.875rem;
 	line-height: 1.21428em;
@@ -492,6 +482,10 @@ input[type="text"] {
 .upcoming-task-section {
 	display: flex;
 	gap: 1.1875rem;
+}
+
+.progress-category:hover .progress h1 {
+	text-decoration: underline;
 }
 
 .progress-category img,
@@ -518,8 +512,6 @@ input[type="text"] {
 }
 
 .progress-title {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1rem;
 	line-height: 1.1875em;
@@ -527,8 +519,6 @@ input[type="text"] {
 }
 
 .progress-diff {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 400;
 	font-size: 0.875rem;
 	line-height: 1.21428em;
@@ -548,8 +538,6 @@ input[type="text"] {
 }
 
 .profile span {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1.25rem;
 	line-height: 1.2em;
@@ -576,8 +564,6 @@ input[type="text"] {
 }
 
 .download span {
-	font-family: "Inter";
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1.125rem;
 	line-height: 1.3333em;
