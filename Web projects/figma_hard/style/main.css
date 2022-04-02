@@ -64,7 +64,7 @@ ul {
 	color: white;
 	width: 12em;
 	height: 3em;
-	border-radius: 10px;
+	border-radius: 0.625em;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 600;
@@ -140,19 +140,19 @@ a:hover {
 
 .upgrade {
 	width: 70.588%;
-	height: 274px;
+	height: 26.7578125vh;
 	align-self: center;
 	position: relative;
 }
 
 .upgrade p {
 	padding: 0;
-	margin: 0 21px;
+	margin: 0 10.9375%;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 500;
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 1rem;
+	line-height: 1.375em;
 	text-align: center;
 	color: #778dad;
 }
@@ -161,18 +161,19 @@ a:hover {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 232px;
-	border-radius: 12px;
+	height: 84.6715%;
+	border-radius: 0.75rem;
 	display: flex;
 	flex-direction: column-reverse;
-	gap: 15px;
+	gap: 1.4648vh;
 }
 
 .upgrade > img {
 	z-index: 1;
 	position: absolute;
 	top: 0;
-	left: 55px;
+	left: 3.4375vw;
+	width: 5.3125vw;
 }
 
 .upgrade-button {
@@ -210,19 +211,19 @@ a:hover {
 .gallery {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 2.625rem;
+	gap: 2.625vw;
 }
 
 .gallery-1 {
 	grid-column: span 2;
-	width: 869px;
-	height: 363px;
+	width: 54.3125vw;
+	height: 35.449vh;
 }
 
 .gallery-2,
 .gallery-3 {
-	width: 415px;
-	height: 311px;
+	width: 25.9375vw;
+	height: 30.371vh;
 }
 
 .gallery-1,
@@ -257,8 +258,8 @@ a:hover {
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 500;
-	font-size: 24px;
-	line-height: 29px;
+	font-size: 1.5rem;
+	line-height: 1.208em;
 	color: #ffffff;
 }
 .gallery-lessons {
@@ -268,11 +269,10 @@ a:hover {
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 400;
-	font-size: 18px;
-	line-height: 22px;
+	font-size: 1.125rem;
+	line-height: 1.2222em;
 	color: rgba(255, 255, 255, 0.8);
 }
-
 .gallery-duration {
 	position: absolute;
 	right: 5%;
@@ -280,8 +280,8 @@ a:hover {
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 19px;
+	font-size: 1rem;
+	line-height: 1.1875em;
 	color: rgba(255, 255, 255, 0.8);
 }
 
@@ -333,6 +333,11 @@ a:hover {
 #gallery-lessons-2,
 #gallery-lessons-3 {
 	left: 6%;
+}
+
+.play-icon {
+	width: 2.875vw;
+	height: 4.4921875vh;
 }
 
 .search-bar {
@@ -399,10 +404,10 @@ input[type="text"] {
 
 .course-nav-rest span::after {
 	position: absolute;
-	bottom: -10px;
+	bottom: -0.9765625vh;
 	left: 37%;
 	width: 30%;
-	height: 2px;
+	height: 0.1953125vh;
 	border-radius: 20%;
 	display: block;
 	content: "";
@@ -419,14 +424,14 @@ input[type="text"] {
 	height: fit-content;
 	align-self: center;
 	display: inherit;
-	gap: 51px;
+	gap: 3.1875vw;
 }
 
 .right {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 43px 40px 84px 32px;
+	padding: 4.19921875vh 2.5vw 8.203125vh 2vw;
 	justify-content: space-between;
 }
 
@@ -440,7 +445,7 @@ input[type="text"] {
 
 .grid-container {
 	display: grid;
-	gap: 27px;
+	gap: 2.6367vh;
 }
 
 .progress {
@@ -451,7 +456,7 @@ input[type="text"] {
 .upcoming-task h1 {
 	padding: 0;
 	margin: 0;
-	margin-bottom: 1.7222em;
+	margin-bottom: 3.0273vh;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 600;
@@ -462,7 +467,6 @@ input[type="text"] {
 
 .upcoming-task {
 	width: 82%;
-	height: 176px;
 }
 
 .upcoming-task-section-title {
@@ -499,7 +503,7 @@ input[type="text"] {
 	display: grid;
 	grid-template-columns: 42% 42.5%;
 	width: 100%;
-	column-gap: 38px;
+	column-gap: 2.375vw;
 }
 
 .progress-bar {
@@ -507,9 +511,9 @@ input[type="text"] {
 	grid-column-start: 2;
 	grid-row-start: 1;
 	align-self: center;
-	width: 104px;
-	height: 6px;
-	border-radius: 21px;
+	width: 6.5vw;
+	height: 0.5859vh;
+	border-radius: 1.3125rem;
 }
 
 .progress-title {
@@ -536,8 +540,8 @@ input[type="text"] {
 }
 
 .profile {
-	width: 240px;
-	height: 56px;
+	width: 100%;
+	height: 5.46875vh;
 	display: flex;
 	align-items: center;
 }
@@ -561,11 +565,13 @@ input[type="text"] {
 }
 
 .download {
-	width: 312px;
-	height: 204px;
+	width: 100%;
+	height: 19.921vh;
 	background: var(--bg-gray);
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	background-image: url(../img/right/download/download-mask.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .download span {
@@ -578,16 +584,23 @@ input[type="text"] {
 }
 
 .download > div {
-	margin-top: 21px;
-	margin-left: 24px;
+	margin-top: 2.05vh;
+	margin-left: 1.5vw;
 }
 
 .download div a > img {
-	margin-top: 16px;
-	margin-right: 16px;
+	margin-top: 1rem;
+	margin-right: 1rem;
+	width: 2.5vw;
+	height: 3.90625vh;
 }
 
 .img-container {
 	width: 3rem;
 	height: 3rem;
+}
+
+.profile-image {
+	width: 3.5vw;
+	height: 100%;
 }
