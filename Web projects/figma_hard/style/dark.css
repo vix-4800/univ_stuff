@@ -1,0 +1,39 @@
+.left,
+.right,
+.search-bar,
+.search-input input {
+	background-color: #3a3a3a;
+}
+
+.middle {
+	background-color: #474747;
+}
+
+.bg-gray {
+	background-color: #474747;
+}
+
+.course-nav-rest span,
+.course-nav h1,
+.logo-header,
+.menu ul li a span,
+.progress h1,
+.upcoming-task h1,
+.progress-title,
+.upcoming-task-section-title,
+.profile span,
+.search-input input,
+.bg-gray p,
+.download div span {
+	color: white;
+}
+
+.progress-diff,
+.upcoming-task-section-date {
+	color: rgb(192, 192, 192);
+}
+
+.download {
+	border: solid white 1px;
+	background-color: #3a3a3a;
+}

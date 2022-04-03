@@ -209,13 +209,13 @@ a:hover {
 
 .gallery-1 {
 	grid-column: span 2;
-	width: 54.3125vw;
+	width: 100%;
 	height: 35.449vh;
 }
 
 .gallery-2,
 .gallery-3 {
-	width: 25.9375vw;
+	width: 100%;
 	height: 30.371vh;
 }
 
@@ -280,7 +280,7 @@ a:hover {
 	bottom: 0;
 	background-color: gray;
 	opacity: 0%;
-	border-radius: 2%;
+	border-radius: 0.75vw;
 	display: flex;
 	justify-content: center;
 }
@@ -320,17 +320,11 @@ a:hover {
 	transition: transform ease-in-out 150ms;
 }
 
-.gallery-1:hover .gallery-name,
-.gallery-1:hover .gallery-lessons,
-.gallery-1:hover .gallery-duration,
-.gallery-2:hover .gallery-name,
-.gallery-2:hover .gallery-lessons,
-.gallery-2:hover .gallery-duration,
-.gallery-3:hover .gallery-name,
-.gallery-3:hover .gallery-lessons,
-.gallery-3:hover .gallery-duration {
+.gallery-1:hover :is(.gallery-name, .gallery-lessons, .gallery-duration),
+.gallery-2:hover :is(.gallery-name, .gallery-lessons, .gallery-duration),
+.gallery-3:hover :is(.gallery-name, .gallery-lessons, .gallery-duration) {
 	transition: filter ease-in-out 250ms;
-	filter: blur(1.3px);
+	filter: blur(1.5px);
 }
 
 #gallery-name-2,
@@ -346,13 +340,21 @@ a:hover {
 }
 
 .search-bar {
-	width: 54.14%;
+	width: 50%;
+	transition: width ease-in-out 500ms;
 	height: 6.3%;
 	border-radius: 0.66666em;
 	background-color: white;
 	display: flex;
 	flex-direction: row;
 	font-size: 0.9375rem;
+}
+
+.search-bar:focus-within {
+	width: 100%;
+	transition: width ease-in-out 500ms;
+	box-shadow: 0px 0px 15px -5px black;
+	outline: none;
 }
 
 input[type="text"] {
@@ -590,4 +592,49 @@ input[type="text"] {
 .profile-image {
 	width: 3.5vw;
 	height: 100%;
+}
+
+@media screen and (max-width: 1279px) {
+	body {
+		grid-template-areas: "middle right";
+		grid-template-columns: 4% auto 30%;
+	}
+
+	.left {
+		justify-content: flex-start;
+	}
+
+	.logo {
+		width: 65%;
+	}
+
+	.gallery {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.menu ul li a span,
+	.join-button,
+	.upgrade,
+	.logo-header,
+	.menu ul li::after {
+		display: none;
+	}
+
+	.menu {
+		align-self: center;
+		width: 65%;
+		padding-top: 5vh;
+		height: 27%;
+	}
+	.menu ul {
+		gap: 20px;
+	}
+
+	.menu ul li {
+		height: 6vh;
+	}
+	.menu ul li a {
+		height: 100%;
+		width: 100%;
+	}
 }
