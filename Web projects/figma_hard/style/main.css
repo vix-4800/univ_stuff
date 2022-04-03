@@ -11,6 +11,16 @@ html {
 	font-style: normal;
 }
 
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 .bg-gray {
 	background-color: var(--bg-gray);
 }
@@ -29,15 +39,9 @@ body {
 	height: 100vh;
 }
 
-ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
 .left {
 	padding-top: 17.65%;
-	padding-bottom: 8.203125vh;
+	padding-bottom: 30.8823%;
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-between;
@@ -72,10 +76,6 @@ ul {
 	border: none;
 }
 
-.join-button:hover {
-	cursor: pointer;
-}
-
 .menu {
 	width: 73.529%;
 	height: 40.02%;
@@ -89,11 +89,15 @@ ul {
 	justify-content: space-between;
 }
 
-a {
-	text-decoration: none;
-}
-
-a:hover {
+a:hover,
+.join-button:hover,
+.upgrade-button:hover,
+.gallery-1:hover,
+.gallery-2:hover,
+.gallery-3:hover,
+.upcoming-task-section:hover,
+.progress-category:hover,
+.profile:hover {
 	cursor: pointer;
 }
 
@@ -105,7 +109,7 @@ a:hover {
 	display: flex;
 	flex-direction: row;
 	gap: 1.5625em;
-	width: fit-content;
+	width: 100%;
 }
 
 .menu ul a:hover {
@@ -116,16 +120,20 @@ a:hover {
 	position: relative;
 }
 
+.menu ul li a img {
+	width: 12%;
+}
+
 .menu ul li::after {
 	content: "";
 	display: block;
 	border-radius: 30% 0 0 30%;
-	height: 2.5390625vh;
-	width: 0.1875vw;
+	height: 125%;
+	width: 1.5%;
 	position: absolute;
 	background-color: var(--blue-color);
 	right: 0;
-	top: -0.29296vh;
+	top: -15%;
 	transform: scale(1, 0);
 	transition: transform ease-in-out 200ms;
 }
@@ -186,12 +194,8 @@ a:hover {
 	padding: 1em 2.25em 1.0625em 2.5em;
 }
 
-.upgrade-button:hover {
-	cursor: pointer;
-}
-
 .middle {
-	padding: 3.375rem 2.3125rem 4.875rem 2.1875rem;
+	padding: 5.70824% 3.92% 8.2627% 3.70762%;
 }
 
 .container {
@@ -236,12 +240,6 @@ a:hover {
 	position: absolute;
 	bottom: 8%;
 	left: 6%;
-}
-
-.gallery-1:hover,
-.gallery-2:hover,
-.gallery-3:hover {
-	cursor: pointer;
 }
 
 .gallery-name {
@@ -527,11 +525,6 @@ input[type="text"] {
 	color: #83919e;
 }
 
-.upcoming-task-section:hover,
-.progress-category:hover {
-	cursor: pointer;
-}
-
 .profile {
 	width: 100%;
 	height: 5.46875vh;
@@ -549,10 +542,6 @@ input[type="text"] {
 
 .profile > * + img {
 	margin-left: 1.6875vw;
-}
-
-.profile:hover {
-	cursor: pointer;
 }
 
 .download {
