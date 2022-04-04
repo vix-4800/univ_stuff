@@ -28,6 +28,10 @@ ul {
 	background-color: var(--bg-gray);
 }
 
+.bg-gray > p {
+	overflow: hidden;
+}
+
 .bg-blue {
 	background-color: var(--blue-color);
 }
