@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms</title>
+	</head>
+
+	<body style="margin: 0; padding: 0">
+		<main>
+			<form action="check.php" method="GET">
+				<div class="container">
+					<span>Личная информация</span>
+					<br /><br />
+					<input
+						type="text"
+						maxlength="35"
+						placeholder="Фамилия"
+						pattern="^[а-яА-ЯёЁ]{4,35}$"
+						required
+					/>
+					<input
+						type="text"
+						maxlength="35"
+						placeholder="Имя"
+						pattern="^[а-яА-ЯёЁ]{4,35}$"
+						required
+					/>
+					<input
+						type="text"
+						maxlength="35"
+						placeholder="Отчество"
+						pattern="^[а-яА-ЯёЁ]{4,35}$"
+					/>
+					<br /><br />
+					<label for="gender">Пол</label>
+					<input type="radio" name="gender" id="female" required />
+					<label for="female">Ж</label>
+					<input type="radio" name="gender" id="male" />
+					<label for="male">М</label>
+					<br /><br />
+					<label for="eyeColor">Выберите цвет глаз:</label>
+					<input type="color" name="eyeColor" />
+					<br /><br />
+					<label for="date">Введите дату своего рождения: </label>
+					<input type="date" required />
+					<br /><br />
+					<label for="age">Укажите свой возраст:</label>
+					<input
+						type="range"
+						name="age"
+						min="18"
+						max="100"
+						step="1"
+						value="25"
+					/>
+					<br /><br />
+					<label for="placeOfBirth"
+						>Укажите место своего рождения:</label
+					>
+					<input
+						type="text"
+						name="placeOfBirth"
+						pattern="^[а-яА-ЯёЁ.,\-\s]{3,}$"
+						required
+					/>
+					<br /><br />
+				</div>
+
+				<div class="container">
+					<span>Контактная информация</span>
+					<br /><br />
+					<label for="postalCode"
+						>Укажите свой почтовый индекс:</label
+					>
+					<input
+						type="text"
+						name="postalCode"
+						maxlength="12"
+						pattern="^[0-9]{3,12}$"
+						required
+					/>
+					<br /><br />
+					<label for="homeAdress">Домашний адрес: </label>
+					<input
+						type="text"
+						name="homeAdress"
+						pattern="^[а-яА-ЯёЁ.,\-\s]{3,}$"
+						required
+					/>
+					<br /><br />
+					<label for="regDate">Дата регистрации: </label>
+					<input type="date" name="regDate" required />
+					<br /><br />
+					<label for="phoneNum-1"
+						>Номер телефона: +7-ххх-ххх-хх-хх</label
+					>
+					<br />
+					+7-
+					<input
+						class="phoneNum-input"
+						type="tel"
+						name="phoneNum-1"
+						pattern="^[0-9]{3}$"
+						required
+						placeholder="ххх"
+						maxlength="3"
+					/>-<input
+						class="phoneNum-input"
+						type="tel"
+						class="pnoNum-input"
+						name="phoneNum"
+						pattern="^[0-9]{3}$"
+						required
+						placeholder="ххх"
+						maxlength="3"
+					/>-<input
+						class="phoneNum-input-short"
+						type="tel"
+						name="phoneNum"
+						pattern="^[0-9]{2}$"
+						required
+						placeholder="хх"
+						maxlength="2"
+					/>-<input
+						class="phoneNum-input-short"
+						type="tel"
+						name="phoneNum"
+						pattern="^[0-9]{2}$"
+						required
+						placeholder="xx"
+						maxlength="2"
+					/>
+					<br />
+					<br />
+					<label for="properPhoneNum"
+						>Введите номер телефона НОРМАЛЬНО:</label
+					>
+					<input
+						type="tel"
+						name="properPhoneNum"
+						pattern="/^\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}$"
+						value="+7-ххх-ххх-хх-хх"
+						maxlength="16"
+						required
+					/>
+					<br /><br />
+					<label for="userEmail">E-mail: </label>
+					<input type="email" name="userEmail" required />
+					<br /><br />
+				</div>
+
+				<div class="container">
+					<span>Общая информация</span>
+					<br /><br />
+					<label for=""
+						>Загрузите скан первой страницы паспорта</label
+					>
+					<br /><br />
+					<input type="file" accept="image/jpeg" required />
+					<br /><br />
+					<label for="">Откуда Вы узнали о нашем магазине </label>
+					<select
+						name="cars"
+						id="cars"
+						multiple
+						style="width: 350px; height: 106px"
+					>
+						<option value="contact">
+							По рекомендации знакомых
+						</option>
+						<option value="tv">Телевидение</option>
+						<option value="internetAcs">
+							Интернет (нашли через поисковики)
+						</option>
+						<option value="internet">
+							Интернет (статья, ссылка, случайно наткнулись)
+						</option>
+						<option value="magazine">Газета</option>
+					</select>
+					<br /><br />
+				</div>
+
+				<br />
+				<label for="infoCheck" style="margin-left: 15px"
+					>Я даю своё согласие на обработку и хранение персональных
+					данных</label
+				>
+				<input type="checkbox" name="infoCheck" required />
+				<br /><br />
+				<input
+					type="submit"
+					value="Отправить"
+					style="margin-left: 15px"
+				/>
+				<input
+					type="reset"
+					value="Очистить"
+					style="margin-left: 15px"
+				/>
+			</form>
+		</main>
+	</body>
+
+	<style>
+		.container {
+			border-bottom: 1px solid black;
+			padding: 15px;
+		}
+
+		.container > span {
+			font-size: 20px;
+			font-weight: 600;
+		}
+
+		.phoneNum-input {
+			width: 21px;
+		}
+
+		.phoneNum-input-short {
+			width: 14px;
+		}
+
+		input {
+			border-radius: 5px;
+		}
+	</style>
+</html>

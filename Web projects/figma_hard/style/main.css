@@ -539,10 +539,10 @@ input[type="text"] {
 
 .course-nav-rest span::after {
 	position: absolute;
-	bottom: -0.9765625vh;
+	bottom: -65%;
 	left: 37%;
 	width: 30%;
-	height: 0.1953125vh;
+	height: 10%;
 	border-radius: 20%;
 	display: block;
 	content: "";
@@ -869,9 +869,13 @@ input[type="text"] {
 	}
 
 	main {
-		grid-template-areas: "middle right";
-		-ms-grid-columns: 5% auto 30%;
-		grid-template-columns: 5% auto 30%;
+		grid-template-areas: "left middle right";
+		-ms-grid-columns: minmax(25px, 5%) minmax(325px, auto)
+			minmax(150px, 30%);
+		grid-template-columns: minmax(25px, 5%) minmax(325px, auto) minmax(
+				150px,
+				30%
+			);
 		-webkit-transition: grid-template-columns ease-in-out 300ms;
 		-o-transition: grid-template-columns ease-in-out 300ms;
 		transition: grid-template-columns ease-in-out 300ms;
