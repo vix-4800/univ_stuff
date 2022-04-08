@@ -83,21 +83,22 @@ void measure_exec_time(int size, int type) {
         break;
     }
     std::cout << " sort for " << size << " elements in microseconds: " << duration.count() << std::endl;
+
     // print_arr(my_array, size);
 }
 
 int main() {
-    for (size_t i = 100; i <= 100000; i *= 10) {
+    for (size_t i = 100; i <= 100; i *= 10) {
         // for (size_t j = 0; j < 3; j++)
 
-        // measure_exec_time(i, quick);
-        // measure_exec_time(i, shell);
+        // measure_exec_time(i, quick); // отчитано
+        // measure_exec_time(i, shell); // отчитано
         // measure_exec_time(i, heap);
-        // measure_exec_time(i, insert);
-        // measure_exec_time(i, bubble);
-        // measure_exec_time(i, select);
+        // measure_exec_time(i, insert); // отчитано
+        // measure_exec_time(i, bubble); // отчитано
+        // measure_exec_time(i, select); // отчитано
         // measure_exec_time(i, merge_s);
-        measure_exec_time(i, radix);
+        // measure_exec_time(i, radix);
         std::cout << "-------------------------------------------------------------" << std::endl;
     }
 
