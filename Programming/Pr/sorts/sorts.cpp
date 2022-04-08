@@ -1,3 +1,4 @@
+#include "bubble_sort.h"
 #include "heap_sort.h"
 #include "insertion_sort.h"
 #include "quick_sort.h"
@@ -7,13 +8,19 @@
 
 using namespace std::chrono;
 
-enum sort_types
-{
+enum sort_types {
     quick = 1,
     shell = 2,
     heap = 3,
-    insert = 4
+    insert = 4,
+    bubble = 5
 };
+
+void print_arr(int *arr, int size) {
+    for (size_t i = 0; i < size; i++)
+        std::cout << arr[i] << ' ';
+    std::cout << std::endl;
+}
 
 void measure_exec_time(int size, int type) {
     int my_array[size];
@@ -30,6 +37,8 @@ void measure_exec_time(int size, int type) {
         heap_sort(my_array, size);
     if (type == insert)
         insertion_sort(my_array, size);
+    if (type == bubble)
+        bubble_sort(my_array, size);
 
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
@@ -48,20 +57,20 @@ void measure_exec_time(int size, int type) {
     case 4:
         std::cout << "insertion";
         break;
+    case 5:
+        std::cout << "bubble";
+        break;
     }
-    std::cout << " sort for " << size << " elements in ms: " << duration.count() << std::endl;
-
-    // for (size_t i = 0; i < 100; i++)
-    //     std::cout << my_array[i] << ' ';
-    // std::cout << std::endl;
+    std::cout << " sort for " << size << " elements in µs: " << duration.count() << std::endl;
 }
 
 int main() {
-    for (size_t i = 100; i <= 100000; i *= 10) {
-        measure_exec_time(i, quick);
-        measure_exec_time(i, shell);
-        measure_exec_time(i, heap);
-        measure_exec_time(i, insert);
+    for (size_t i = 100; i <= 100; i *= 10) {
+        // measure_exec_time(i, quick);
+        // measure_exec_time(i, shell);
+        // measure_exec_time(i, heap);
+        // measure_exec_time(i, insert);
+        // measure_exec_time(i, bubble);
         std::cout << "-------------------------------------------------------------" << std::endl;
     }
 
