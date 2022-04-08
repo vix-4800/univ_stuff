@@ -17,7 +17,7 @@ enum sort_types {
     heap = 3,
     insert = 4,
     bubble = 5,
-    select = 6,
+    select_s = 6,
     merge_s = 7,
     radix = 8
 };
@@ -46,7 +46,7 @@ void measure_exec_time(int size, int type) {
         insertion_sort(my_array, size);
     if (type == bubble)
         bubble_sort(my_array, size);
-    if (type == select)
+    if (type == select_s)
         selection_sort(my_array, size);
     if (type == merge_s)
         merge_sort(my_array, 0, size - 1);
@@ -98,14 +98,14 @@ int main() {
     for (size_t i = 100; i <= 100000; i *= 10) {
         // for (size_t j = 0; j < 3; j++) // для запуска функций на 100 элементов (для поиска среднего значения времени исполнения)
 
-        measure_exec_time(i, quick);   // отчитано (Быстрая сортировка)
-        measure_exec_time(i, shell);   // отчитано (Сортировка Шелла)
-        measure_exec_time(i, heap);    // (Пирамидальная сортировка)
-        measure_exec_time(i, insert);  // отчитано (Сортировка вставками)
-        measure_exec_time(i, bubble);  // отчитано (Сортировка пузырьком)
-        measure_exec_time(i, select);  // отчитано (Сортировка выбором)
-        measure_exec_time(i, merge_s); // (Сортировка слиянием)
-        measure_exec_time(i, radix);   // (Поразрядная сортировка)
+        measure_exec_time(i, quick);    // отчитано (Быстрая сортировка)
+        measure_exec_time(i, shell);    // отчитано (Сортировка Шелла)
+        measure_exec_time(i, heap);     // (Пирамидальная сортировка)
+        measure_exec_time(i, insert);   // отчитано (Сортировка вставками)
+        measure_exec_time(i, bubble);   // отчитано (Сортировка пузырьком)
+        measure_exec_time(i, select_s); // отчитано (Сортировка выбором)
+        measure_exec_time(i, merge_s);  // (Сортировка слиянием)
+        measure_exec_time(i, radix);    // (Поразрядная сортировка)
         std::cout << "-------------------------------------------------------------" << std::endl;
     }
 
