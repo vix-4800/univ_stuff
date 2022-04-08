@@ -46,10 +46,10 @@ number of elements -> execution time in microseconds
 
 ### Radix sort
 
-100 -> 7851.33 \
-1000 -> 75067 \
-10000 -> 826070 \
-100000 -> 8374342
+100 -> 5 \
+1000 -> 50 \
+10000 -> 522 \
+100000 -> 5333
 
 ### Selection sort
 

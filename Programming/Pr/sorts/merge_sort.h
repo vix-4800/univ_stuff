@@ -1,19 +1,21 @@
-int *merge(int *array, int l, int m, int r) {
-    int i, j, k, nl, nr;
-    // size of left and right sub-arrays
-    nl = m - l + 1;
-    nr = r - m;
-    int larr[nl], rarr[nr];
-    // fill left and right sub-arrays
-    for (i = 0; i < nl; i++)
-        larr[i] = array[l + i];
-    for (j = 0; j < nr; j++)
+int *merge(int *array, const int left, const int m, const int right) {
+    int k;
+    int size_left = m - left + 1;
+    int size_right = right - m;
+    int larr[size_left], rarr[size_right];
+
+    size_t i, j;
+    for (i = 0; i < size_left; i++)
+        larr[i] = array[left + i];
+
+    for (j = 0; j < size_right; j++)
         rarr[j] = array[m + 1 + j];
+
     i = 0;
     j = 0;
-    k = l;
-    // marge temp arrays to real array
-    while (i < nl && j < nr) {
+    k = left;
+
+    while (i < size_left && j < size_right) {
         if (larr[i] <= rarr[j]) {
             array[k] = larr[i];
             i++;
@@ -23,12 +25,14 @@ int *merge(int *array, int l, int m, int r) {
         }
         k++;
     }
-    while (i < nl) { // extra element in left array
+
+    while (i < size_left) {
         array[k] = larr[i];
         i++;
         k++;
     }
-    while (j < nr) { // extra element in right array
+
+    while (j < size_right) {
         array[k] = rarr[j];
         j++;
         k++;

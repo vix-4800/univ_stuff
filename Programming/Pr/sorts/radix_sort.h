@@ -1,8 +1,3 @@
-#include <cmath>
-#include <list>
-
-using namespace std;
-
 int find_max(int *arr, int size) {
     int max = arr[0];
 
@@ -14,31 +9,30 @@ int find_max(int *arr, int size) {
     return max;
 }
 
-int *radix_sort(int *src_arr, int size) {
-    int i, j, m, p = 1, index, temp, count = 0;
-    int max = find_max(src_arr, size);
-    list<int> pocket[10];
+void srt_cnt(int *arr, int size, int exp) {
+    int output[size];
+    int count[10] = {0};
 
-    for (i = 0; i < max; i++) {
-        m = pow(10, i + 1);
-        p = pow(10, i);
+    for (int i = 0; i < size; i++)
+        count[(arr[i] / exp) % 10]++;
 
-        for (j = 0; j < size; j++) {
-            temp = src_arr[j] % m;
-            index = temp / p;
-            pocket[index].push_back(src_arr[j]);
-        }
+    for (int i = 1; i < 10; i++)
+        count[i] += count[i - 1];
 
-        count = 0;
-
-        for (j = 0; j < 10; j++) {
-            while (!pocket[j].empty()) {
-                src_arr[count] = *(pocket[j].begin());
-                pocket[j].erase(pocket[j].begin());
-                count++;
-            }
-        }
+    for (int i = size - 1; i >= 0; i--) {
+        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+        count[(arr[i] / exp) % 10]--;
     }
+
+    for (int i = 0; i < size; i++)
+        arr[i] = output[i];
+}
+
+int *radix_sort(int *src_arr, int size) {
+    int m = find_max(src_arr, size);
+
+    for (size_t i = 1; m / i > 0; i *= 10)
+        srt_cnt(src_arr, size, i);
 
     return src_arr;
 }

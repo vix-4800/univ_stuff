@@ -35,6 +35,7 @@ void measure_exec_time(int size, int type) {
 
     auto start = high_resolution_clock::now();
 
+    // запуск нужной функции
     if (type == quick)
         quick_sort(my_array, size);
     if (type == shell)
@@ -55,6 +56,7 @@ void measure_exec_time(int size, int type) {
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
 
+    // вывод результата в консоль
     std::cout << "Execution time of ";
     switch (type) {
     case 1:
@@ -88,19 +90,26 @@ void measure_exec_time(int size, int type) {
 }
 
 int main() {
-    for (size_t i = 100; i <= 100; i *= 10) {
-        // for (size_t j = 0; j < 3; j++)
+    // Функция вывода получившегося массива есть в конце функции measure_exec_time
+    // !!! Однако стоит учесть !!!
+    // что цикл на следующих строках будет генерировать массивы размерами до 100000, и выводить в консоль я бы такое не стал, так что лучше уменьшить
+    // условие выхода из цикла хотя бы до 100
 
-        // measure_exec_time(i, quick); // отчитано
-        // measure_exec_time(i, shell); // отчитано
-        // measure_exec_time(i, heap);
-        // measure_exec_time(i, insert); // отчитано
-        // measure_exec_time(i, bubble); // отчитано
-        // measure_exec_time(i, select); // отчитано
-        // measure_exec_time(i, merge_s);
-        // measure_exec_time(i, radix);
+    for (size_t i = 100; i <= 100000; i *= 10) {
+        // for (size_t j = 0; j < 3; j++) // для запуска функций на 100 элементов (для поиска среднего значения времени исполнения)
+
+        measure_exec_time(i, quick);   // отчитано (Быстрая сортировка)
+        measure_exec_time(i, shell);   // отчитано (Сортировка Шелла)
+        measure_exec_time(i, heap);    // (Пирамидальная сортировка)
+        measure_exec_time(i, insert);  // отчитано (Сортировка вставками)
+        measure_exec_time(i, bubble);  // отчитано (Сортировка пузырьком)
+        measure_exec_time(i, select);  // отчитано (Сортировка выбором)
+        measure_exec_time(i, merge_s); // (Сортировка слиянием)
+        measure_exec_time(i, radix);   // (Поразрядная сортировка)
         std::cout << "-------------------------------------------------------------" << std::endl;
     }
+
+    // таблица, а также .md файл с результатами измерений находятся в архиве
 
     return EXIT_SUCCESS;
 }
