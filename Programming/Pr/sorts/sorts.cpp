@@ -17,7 +17,7 @@ enum sort_types {
     heap = 3,
     insert = 4,
     bubble = 5,
-    select = 6,
+    select_s = 6,
     merge_s = 7,
     radix = 8
 };
@@ -45,7 +45,7 @@ void measure_exec_time(int size, int type) {
         insertion_sort(my_array, size);
     if (type == bubble)
         bubble_sort(my_array, size);
-    if (type == select)
+    if (type == select_s)
         selection_sort(my_array, size);
     if (type == merge_s)
         merge_sort(my_array, 0, size - 1);
@@ -90,13 +90,13 @@ int main() {
     for (size_t i = 100; i <= 100000; i *= 10) {
         // for (size_t j = 0; j < 3; j++)
 
-        // measure_exec_time(i, quick);
-        // measure_exec_time(i, shell);
-        // measure_exec_time(i, heap);
-        // measure_exec_time(i, insert);
-        // measure_exec_time(i, bubble);
-        // measure_exec_time(i, select);
-        // measure_exec_time(i, merge_s);
+        measure_exec_time(i, quick);
+        measure_exec_time(i, shell);
+        measure_exec_time(i, heap);
+        measure_exec_time(i, insert);
+        measure_exec_time(i, bubble);
+        measure_exec_time(i, select_s);
+        measure_exec_time(i, merge_s);
         measure_exec_time(i, radix);
         std::cout << "-------------------------------------------------------------" << std::endl;
     }
