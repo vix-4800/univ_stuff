@@ -1,7 +1,10 @@
 #include "bubble_sort.h"
 #include "heap_sort.h"
 #include "insertion_sort.h"
+#include "merge_sort.h"
 #include "quick_sort.h"
+#include "radix_sort.h"
+#include "selection_sort.h"
 #include "shell_sort.h"
 #include <chrono>
 #include <iostream>
@@ -13,7 +16,10 @@ enum sort_types {
     shell = 2,
     heap = 3,
     insert = 4,
-    bubble = 5
+    bubble = 5,
+    select = 6,
+    merge_s = 7,
+    radix = 8
 };
 
 void print_arr(int *arr, int size) {
@@ -39,6 +45,12 @@ void measure_exec_time(int size, int type) {
         insertion_sort(my_array, size);
     if (type == bubble)
         bubble_sort(my_array, size);
+    if (type == select)
+        selection_sort(my_array, size);
+    if (type == merge_s)
+        merge_sort(my_array, 0, size - 1);
+    if (type == radix)
+        radix_sort(my_array, size);
 
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
@@ -60,17 +72,32 @@ void measure_exec_time(int size, int type) {
     case 5:
         std::cout << "bubble";
         break;
+    case 6:
+        std::cout << "select";
+        break;
+    case 7:
+        std::cout << "merge";
+        break;
+    case 8:
+        std::cout << "radix";
+        break;
     }
-    std::cout << " sort for " << size << " elements in µs: " << duration.count() << std::endl;
+    std::cout << " sort for " << size << " elements in microseconds: " << duration.count() << std::endl;
+    // print_arr(my_array, size);
 }
 
 int main() {
-    for (size_t i = 100; i <= 100; i *= 10) {
+    for (size_t i = 100; i <= 100000; i *= 10) {
+        // for (size_t j = 0; j < 3; j++)
+
         // measure_exec_time(i, quick);
         // measure_exec_time(i, shell);
         // measure_exec_time(i, heap);
         // measure_exec_time(i, insert);
         // measure_exec_time(i, bubble);
+        // measure_exec_time(i, select);
+        // measure_exec_time(i, merge_s);
+        measure_exec_time(i, radix);
         std::cout << "-------------------------------------------------------------" << std::endl;
     }
 
