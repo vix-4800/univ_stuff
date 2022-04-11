@@ -16,7 +16,7 @@
 					<input
 						type="text"
 						id="zodiacSignInput"
-						placeholder="знак зодиака"
+						placeholder="Знак зодиака"
 						maxlength="8"
 					/>
 				</form>
@@ -25,66 +25,64 @@
 				</button>
 			</div>
 
-			<label for="loops">From 1 to 40</label>
+			<label for="loops">От 1 до 40</label>
 			<div id="loops">
 				<button type="button" onclick="printLoopFor();">
-					Using for
+					Используя for
 				</button>
 				<button type="button" onclick="printLoopWhile();">
-					Using while
+					Используя while
 				</button>
 				<button type="button" onclick="printLoopDoWhile();">
-					Using do / while
+					Используя do / while
 				</button>
 				<button id="clearBtn" type="button">Clear</button>
 				<p style="width: 100%">Result:</p>
 				<p id="loopResult"></p>
 			</div>
 
-			<label for="spam">Spam</label>
+			<label for="spam">Заспамить</label>
 			<div id="spam">
-				<button onclick="spamThisPageToDeath();">SPAM</button>
+				<button onclick="spamThisPageToDeath();">Spam</button>
 			</div>
 
-			<label for="sortInput">Sort Input</label>
+			<label for="sortInput">Отсортировать 3 числа</label>
 			<div id="sortInput">
-				<button onclick="sortNums();">Sort 3 numbers</button>
+				<button onclick="sortNums();">Sort</button>
 			</div>
 
-			<label for="evenOrNot"
-				>Even / Not even loop from 0 to
-				<span style="text-decoration: line-through">hero</span>
-				15
-			</label>
+			<label for="evenOrNot">Чётные / нечётные числа от 0 до 15 </label>
 			<div id="evenOrNot">
 				<button onclick="evenNotEvenLoop();">Show loop</button>
 			</div>
 
-			<label for="biggerThanFive">Bigger than five</label>
+			<label for="biggerThanFive">Больше пяти</label>
 			<div id="biggerThanFive">
 				<button onclick="biggerThanFive(0);">Play</button>
 			</div>
 
-			<label for="from8To20">Even numbers from 8 to 20</label>
+			<label for="from8To20">Чётные числа от 8 до 20</label>
 			<div id="from8To20">
 				<button onclick="evenfrom8To20();">Show them numbers</button>
 				<button id="clearEvenfrom8To20">clear</button>
 				<p id="from8To20Res" style="width: 100%"></p>
 			</div>
 
-			<label for="sumOfMultiplesFrom0To1000">Sum</label>
+			<label for="sumOfMultiplesFrom0To1000"
+				>Сумма кратных 3-ём и 5-ти от 100 до 1000</label
+			>
 			<div id="sumOfMultiplesFrom0To1000">
 				<button onclick="multiplesFrom0To1000();">Show sum</button>
 			</div>
 
-			<label for="armstrongNumber">Armstrong Number</label>
+			<label for="armstrongNumber">Число Армстронга</label>
 			<div id="armstrongNumber">
 				<button onclick="armstrongNumberCheck();">
 					Enter your number
 				</button>
 			</div>
 
-			<label for="printStars">Print stars to console</label>
+			<label for="printStars">Звёздочки в консоль</label>
 			<div id="printStars">
 				<button id="printStarsBtn">Print</button>
 			</div>
@@ -92,6 +90,14 @@
 	</body>
 	<style>
 		body {
+			background-image: -webkit-gradient(
+				linear,
+				left bottom,
+				right top,
+				from(#ffffff),
+				to(#dbf6ff)
+			);
+			background-image: -o-linear-gradient(left bottom, #ffffff, #dbf6ff);
 			background-image: linear-gradient(to right top, #ffffff, #dbf6ff);
 			margin: 0;
 			padding-left: 25px;
@@ -101,8 +107,11 @@
 			border-bottom: 1px solid black;
 			padding: 15px;
 			margin-bottom: 20px;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
 			gap: 10px;
+			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
 			margin-right: 25px;
 		}
