@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 1</title>
+		<script src="task_1.js" defer></script>
+	</head>
+	<body>
+		<main>
+			<h3>Task 1</h3>
+			<label for="zodiac-signs">Знаки зодиака</label>
+			<div id="zodiac-signs">
+				<form action="GET">
+					<input
+						type="text"
+						id="zodiacSignInput"
+						placeholder="знак зодиака"
+						maxlength="8"
+					/>
+				</form>
+				<button type="button" onclick="getZodiacSign();">
+					CLICK ME
+				</button>
+			</div>
+
+			<label for="loops">From 1 to 40</label>
+			<div id="loops">
+				<button type="button" onclick="printLoopFor();">
+					Using for
+				</button>
+				<button type="button" onclick="printLoopWhile();">
+					Using while
+				</button>
+				<button type="button" onclick="printLoopDoWhile();">
+					Using do / while
+				</button>
+				<button id="clearBtn" type="button">Clear</button>
+				<p style="width: 100%">Result:</p>
+				<p id="loopResult"></p>
+			</div>
+
+			<label for="spam">Spam</label>
+			<div id="spam">
+				<button onclick="spamThisPageToDeath();">SPAM</button>
+			</div>
+
+			<label for="sortInput">Sort Input</label>
+			<div id="sortInput">
+				<button onclick="sortNums();">Sort 3 numbers</button>
+			</div>
+
+			<label for="evenOrNot"
+				>Even / Not even loop from 0 to
+				<span style="text-decoration: line-through">hero</span>
+				15
+			</label>
+			<div id="evenOrNot">
+				<button onclick="evenNotEvenLoop();">Show loop</button>
+			</div>
+
+			<label for="biggerThanFive">Bigger than five</label>
+			<div id="biggerThanFive">
+				<button onclick="biggerThanFive(0);">Play</button>
+			</div>
+
+			<label for="from8To20">Even numbers from 8 to 20</label>
+			<div id="from8To20">
+				<button onclick="evenfrom8To20();">Show them numbers</button>
+				<button id="clearEvenfrom8To20">clear</button>
+				<p id="from8To20Res" style="width: 100%"></p>
+			</div>
+
+			<label for="sumOfMultiplesFrom0To1000">Sum</label>
+			<div id="sumOfMultiplesFrom0To1000">
+				<button onclick="multiplesFrom0To1000();">Show sum</button>
+			</div>
+
+			<label for="armstrongNumber">Armstrong Number</label>
+			<div id="armstrongNumber">
+				<button onclick="armstrongNumberCheck();">
+					Enter your number
+				</button>
+			</div>
+
+			<label for="printStars">Print stars to console</label>
+			<div id="printStars">
+				<button id="printStarsBtn">Print</button>
+			</div>
+		</main>
+	</body>
+	<style>
+		body {
+			background-image: linear-gradient(to right top, #ffffff, #dbf6ff);
+			margin: 0;
+			padding-left: 25px;
+		}
+
+		div {
+			border-bottom: 1px solid black;
+			padding: 15px;
+			margin-bottom: 20px;
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+			margin-right: 25px;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		button {
+			padding: 2px 15px;
+		}
+	</style>
+</html>

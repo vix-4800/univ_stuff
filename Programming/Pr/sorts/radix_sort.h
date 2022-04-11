@@ -1,3 +1,5 @@
+#include <cstddef>
+
 int find_max(int *arr, int size) {
     int max = arr[0];
 
