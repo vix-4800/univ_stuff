@@ -1,0 +1,14 @@
+.course-nav-rest span,
+.course-nav h1,
+.logo-header,
+.menu ul li a span,
+.progress h1,
+.upcoming-task h1,
+.progress-title,
+.upcoming-task-section-title,
+.profile span,
+.search-input input,
+.bg-gray p,
+.download div span {
+	color: white;
+}

@@ -4,8 +4,484 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Task 4</title>
-		<script src="main.js"></script>
+		<link rel="stylesheet" href="style/main.css" />
+		<script src="main.js" defer></script>
+		<!--
+		<link rel="stylesheet" href="style/dark.css" media="(prefers-color-scheme: dark)">
+		-->
+		<title>Document</title>
 	</head>
-	<body></body>
+	<body class="dark-theme">
+		<div class="loading">
+			<div class="loading-text">
+				<span class="loading-text-words">L</span>
+				<span class="loading-text-words">O</span>
+				<span class="loading-text-words">A</span>
+				<span class="loading-text-words">D</span>
+				<span class="loading-text-words">I</span>
+				<span class="loading-text-words">N</span>
+				<span class="loading-text-words">G</span>
+			</div>
+		</div>
+
+		<main>
+			<div class="left">
+				<div class="logo">
+					<a href="#"
+						><img
+							src="img/left/logo.svg"
+							alt="logo"
+							style="height: 100%; width: 100%"
+					/></a>
+					<span class="logo-header">Ohara</span>
+				</div>
+				<input
+					class="join-button bg-blue"
+					type="button"
+					value="Join a course"
+				/>
+				<div class="menu">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/left/menu/Dashboard.svg" alt="" />
+								<span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img
+									src="img/left/menu/All courses.svg"
+									alt=""
+								/>
+								<span>All courses</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="img/left/menu/Resources.svg" alt="" />
+								<span>Resources</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="img/left/menu/Friends.svg" alt="" />
+								<span>Friends</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="img/left/menu/Chats.svg" alt="" />
+								<span>Chats</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="img/left/menu/Settings.svg" alt="" />
+								<span>Settings</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="upgrade">
+					<img src="img/left/folder.png" alt="" />
+					<div class="bg-gray">
+						<input
+							class="bg-blue upgrade-button"
+							type="button"
+							value="Upgrade"
+						/>
+						<p>Upgrade to for more resources</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="middle bg-gray">
+				<div class="container">
+					<div class="search-bar">
+						<img
+							src="img/middle/search.svg"
+							alt=""
+							style="
+								width: 5%;
+								height: 34%;
+								align-self: center;
+								margin-left: 1.4375rem;
+							"
+						/>
+						<form
+							action="source.php"
+							method="GET"
+							class="search-input"
+						>
+							<input
+								type="text"
+								placeholder="Search"
+								maxlength="100"
+							/>
+						</form>
+					</div>
+
+					<div class="course-nav">
+						<h1>All courses</h1>
+						<div class="course-nav-rest">
+							<span>Ongoing</span>
+							<span>Favorite</span>
+							<span>Complete</span>
+						</div>
+					</div>
+					<div class="gallery">
+						<div class="gallery-1">
+							<img
+								src="img/middle/gallery/gallery-1.jpg"
+								alt="first course background"
+								style="
+									width: 100%;
+									height: 100%;
+									border-radius: 0.75vw;
+								"
+							/>
+							<span class="gallery-name">UI/UX Design</span>
+							<span class="gallery-lessons">20 lessons</span>
+							<span class="gallery-duration">2h 20min</span>
+							<img
+								class="play-icon-1"
+								src="img/middle/gallery/play.png"
+								alt=""
+							/>
+							<div class="resume-course">
+								<span>Watch</span>
+							</div>
+						</div>
+						<div class="gallery-2">
+							<img
+								src="img/middle/gallery/gallery-2.jpg"
+								alt="second course background"
+								style="
+									width: 100%;
+									height: 100%;
+									border-radius: 0.75vw;
+								"
+							/>
+							<span class="gallery-name" id="gallery-name-2"
+								>Photography</span
+							>
+							<span class="gallery-lessons" id="gallery-lessons-2"
+								>12 lessons</span
+							>
+							<span
+								class="gallery-duration"
+								id="gallery-duration-2"
+								>1h 30min</span
+							>
+							<img
+								class="play-icon"
+								src="img/middle/gallery/play.png"
+								alt=""
+							/>
+							<div class="resume-course">
+								<span>Watch</span>
+							</div>
+						</div>
+						<div class="gallery-3">
+							<img
+								src="img/middle/gallery/gallery-3.jpg"
+								alt="third course background"
+								style="
+									width: 100%;
+									height: 100%;
+									border-radius: 0.75vw;
+								"
+							/>
+							<span class="gallery-name" id="gallery-name-3"
+								>Animation</span
+							>
+							<span class="gallery-lessons" id="gallery-lessons-3"
+								>12 lessons</span
+							>
+							<span
+								class="gallery-duration"
+								id="gallery-duration-3"
+								>2h 30min</span
+							>
+							<img
+								class="play-icon"
+								src="img/middle/gallery/play.png"
+								alt="resume course"
+							/>
+							<div class="resume-course">
+								<span>Watch</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="right">
+				<div class="profile">
+					<div class="profile-image">
+						<img
+							src="img/right/profile.svg"
+							alt="profile image"
+							style="width: 100%; height: 100%"
+						/>
+					</div>
+					<span id="profile-name">Alexa Rogue</span>
+					<svg
+						id="profile-expand-icon"
+						xmlns="http://www.w3.org/2000/svg"
+						aria-hidden="true"
+						role="img"
+						width="1em"
+						height="1em"
+						preserveAspectRatio="xMidYMid meet"
+						viewBox="0 0 24 24"
+					>
+						<path
+							id="profile-expand-icon-path"
+							fill="none"
+							stroke="var(--main-font-color)"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="m4 9l8 8l8-8"
+						/>
+					</svg>
+					<div class="login-options" data-visibility="false">
+						<div>
+							<span>Dashboard</span>
+						</div>
+						<div>
+							<span>Profile</span>
+						</div>
+						<div>
+							<span>Settings</span>
+						</div>
+						<div>
+							<span>Log out</span>
+						</div>
+						<div
+							id="no-hover"
+							style="
+								border-bottom: unset;
+								display: flex;
+								justify-content: space-evenly;
+								flex-direction: row;
+								gap: 20px;
+							"
+						>
+							<svg
+								id="help-icon"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+								role="img"
+								width="1em"
+								height="1em"
+								preserveAspectRatio="xMidYMid meet"
+								viewBox="0 0 24 24"
+							>
+								<path
+									id="help-icon-path"
+									fill="white"
+									d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-3.5h-2c0-3.25 3-3 3-5c0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"
+								/>
+							</svg>
+							<svg
+								id="change-theme-icon"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+								role="img"
+								width="1em"
+								height="1em"
+								preserveAspectRatio="xMidYMid meet"
+								viewBox="0 0 24 24"
+							>
+								<path
+									id="change-theme-icon-path"
+									fill="#ffffff"
+									d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5l1.43 1.43L4.93 20.5L3.5 19.07L19.07 3.5m-6.18 2.43L11.41 5L9.97 6l.42-1.7L9 3.24l1.75-.12l.58-1.65L12 3.1l1.73.03l-1.35 1.13l.51 1.67m-3.3 3.61l-1.16-.73l-1.12.78l.34-1.32l-1.09-.83l1.36-.09l.45-1.29l.51 1.27l1.36.03l-1.05.87l.4 1.31M19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58l2.77-1.15l-.24 3.35l-2.53-2.2m4.33-2.7l1.15-2.77l2.2 2.54l-3.35.23m1.15-4.96l-1.14-2.78l3.34.24l-2.2 2.54M9.63 18.93l2.77 1.15l-2.53 2.19l-.24-3.34Z"
+								/>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="progress">
+					<h1>Progress</h1>
+					<div class="grid-container">
+						<div class="progress-category">
+							<div class="img-container">
+								<img
+									src="img/right/progress/UI-UX Design.svg"
+									alt="first course in progress icon"
+								/>
+							</div>
+							<div class="rest-container">
+								<span class="progress-title">UI/UX Design</span>
+								<span class="progress-diff">Advanced</span>
+								<div
+									class="progress-bar"
+									style="
+										background-color: rgba(
+											94,
+											129,
+											244,
+											0.2
+										);
+									"
+								>
+									<div
+										style="
+											width: 76.923%;
+											height: 100%;
+											background-color: #5e81f4;
+											border-radius: 1.3125rem;
+										"
+									></div>
+								</div>
+							</div>
+						</div>
+						<div class="progress-category">
+							<div class="img-container">
+								<img
+									src="img/right/progress/Photography.svg"
+									alt="second course in progress icon"
+								/>
+							</div>
+							<div class="rest-container">
+								<span class="progress-title">Photography</span>
+								<span class="progress-diff">Intermediate</span>
+								<div
+									class="progress-bar"
+									style="
+										background-color: rgba(
+											12,
+											195,
+											231,
+											0.18
+										);
+									"
+								>
+									<div
+										style="
+											width: 42.307%;
+											height: 100%;
+											background-color: #0cc3e7;
+											border-radius: 1.3125rem;
+										"
+									></div>
+								</div>
+							</div>
+						</div>
+						<div class="progress-category">
+							<div class="img-container">
+								<img
+									src="img/right/progress/Animation.svg"
+									alt="third course in progress icon"
+								/>
+							</div>
+							<div class="rest-container">
+								<span class="progress-title">Animation</span>
+								<span class="progress-diff">Advanced</span>
+								<div
+									class="progress-bar"
+									style="
+										background-color: rgba(
+											255,
+											128,
+											139,
+											0.2
+										);
+									"
+								>
+									<div
+										style="
+											width: 63.461%;
+											height: 100%;
+											background-color: #ffae33;
+											border-radius: 1.3125rem;
+										"
+									></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="upcoming-task">
+					<h1>Upcoming Task</h1>
+					<div class="grid-container">
+						<div class="upcoming-task-section">
+							<div class="img-container">
+								<img
+									src="img/right/upcoming/UI-UX.svg"
+									alt="first upcoming task icon"
+								/>
+							</div>
+
+							<div
+								style="
+									display: flex;
+									flex-direction: column;
+									justify-content: space-around;
+								"
+							>
+								<span class="upcoming-task-section-title"
+									>UI/UX - Discussion</span
+								>
+								<span class="upcoming-task-section-date"
+									>27 Oct 2020, Tuesday</span
+								>
+							</div>
+						</div>
+						<div class="upcoming-task-section">
+							<div class="img-container">
+								<img
+									src="img/right/upcoming/Animation.svg"
+									alt="second upcoming task icon"
+								/>
+							</div>
+
+							<div
+								style="
+									display: flex;
+									flex-direction: column;
+									justify-content: space-around;
+								"
+							>
+								<span class="upcoming-task-section-title"
+									>Animation - 3D Animation</span
+								>
+								<span class="upcoming-task-section-date"
+									>27 Oct 2020, Tuesday</span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="download">
+					<div>
+						<span>
+							Download Ohara <br />
+							Now!
+						</span>
+						<br />
+						<a href="https://play.google.com/" target="__blank">
+							<img
+								src="img/right/download/play_market.svg"
+								alt="play market icon"
+							/>
+						</a>
+						<a
+							href="https://www.apple.com/app-store/"
+							target="__blank"
+						>
+							<img
+								src="img/right/download/apple.svg"
+								alt="app store icon"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
