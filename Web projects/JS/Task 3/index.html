@@ -7,5 +7,31 @@
 		<title>Task 3</title>
 		<script src="main.js" defer></script>
 	</head>
-	<body></body>
+	<body>
+		<main>
+			<div class="hover-me" onmouseover="hoverMe();">
+				<p style="text-align: center; font-size: 3rem">Hover me</p>
+			</div>
+			<button onclick="displayArr();">Вывести</button>
+			<p id="arrContent"></p>
+			<br /><br />
+			<button onclick="sqrtArr();">Ввести значения</button>
+		</main>
+	</body>
+	<style>
+		.hover-me {
+			border: 1px solid red;
+			border-radius: 12px;
+			width: 450px;
+			height: 250px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-bottom: 10px;
+		}
+		button {
+			font-size: 1.3rem;
+			padding: 5px;
+		}
+	</style>
 </html>
