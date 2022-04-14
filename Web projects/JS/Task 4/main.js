@@ -1,5 +1,6 @@
+// Создать объект "студент" 2 разными способами
+// добавить объекту 2 метода на выбор (например, сказать имя, посчитать возраст)
 // Using an Object Literal
-
 const student1 = {
 	firstName: "Антон",
 	lastName: "Гордиенко",
@@ -32,7 +33,6 @@ const student1 = {
 };
 
 // Using the JavaScript Keyword new
-
 const student2 = new Object();
 student2.firstName = "Мария";
 student2.lastName = "Белова";

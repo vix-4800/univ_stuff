@@ -8,14 +8,23 @@
 // console.log(false == "false"); // false
 // console.log(null == ""); // false
 
+// создать переменную, узнать ее тип, добавить вывод на экран текста,
+// в зависимости от значения (if else)
+
 const num = 65;
-// alert(typeof num);
+if (isNaN(num)) {
+	alert("Это не число, тип этой переменной: " + typeof num);
+} else {
+	alert("Это число");
+}
 
 // ------------------------------ 1 ---------------------------------- //
+// запросить у пользователя знак зодиака, и в зависимости от ответа выдать всплывающее окно приветствия
 
 function getZodiacSign() {
-	let zodiacInput = document.getElementById("zodiacSignInput").value;
-	zodiacInput = zodiacInput.toLowerCase();
+	const zodiacInput = document
+		.getElementById("zodiacSignInput")
+		.value.toLowerCase();
 	const zodiacSignsArr = [
 		"овен",
 		"телец",
@@ -32,53 +41,57 @@ function getZodiacSign() {
 		"рыбы",
 	];
 
+	let usrSign;
 	switch (zodiacInput) {
 		case zodiacSignsArr[0]:
-			alert("");
+			usrSign = zodiacSignsArr[0];
 			break;
 		case zodiacSignsArr[1]:
-			alert("");
+			usrSign = zodiacSignsArr[1];
 			break;
 		case zodiacSignsArr[2]:
-			alert("");
+			usrSign = zodiacSignsArr[2];
 			break;
 		case zodiacSignsArr[3]:
-			alert("");
+			usrSign = zodiacSignsArr[3];
 			break;
 		case zodiacSignsArr[4]:
-			alert("");
+			usrSign = zodiacSignsArr[4];
 			break;
 		case zodiacSignsArr[5]:
-			alert("");
+			usrSign = zodiacSignsArr[5];
 			break;
 		case zodiacSignsArr[6]:
-			alert("");
+			usrSign = zodiacSignsArr[6];
 			break;
 		case zodiacSignsArr[7]:
-			alert("");
+			usrSign = zodiacSignsArr[7];
 			break;
 		case zodiacSignsArr[8]:
-			alert("");
+			usrSign = zodiacSignsArr[8];
 			break;
 		case zodiacSignsArr[9]:
-			alert("");
+			usrSign = zodiacSignsArr[9];
 			break;
 		case zodiacSignsArr[10]:
-			alert("");
+			usrSign = zodiacSignsArr[10];
 			break;
 		case zodiacSignsArr[11]:
-			alert("");
+			usrSign = zodiacSignsArr[11];
 			break;
 		case zodiacSignsArr[12]:
-			alert("");
+			usrSign = zodiacSignsArr[12];
 			break;
 		default:
-			alert("wrong input\ntry again");
+			alert("Такого знака зодиака нет\nПопробуйте ещё раз");
 			return 1;
 	}
+
+	alert("Ваш знак зодиака - " + usrSign + ".");
 }
 
 // ------------------------------ 2 ---------------------------------- //
+// вывести все числа от 1 до 40, с использованием 3-х разных циклов
 
 function printLoopFor() {
 	const printResult = document.getElementById("loopResult");
@@ -86,6 +99,7 @@ function printLoopFor() {
 		printResult.insertAdjacentText("beforeend", i + " ");
 	}
 }
+
 function printLoopWhile() {
 	const printResult = document.getElementById("loopResult");
 	let i = 1;
@@ -94,6 +108,7 @@ function printLoopWhile() {
 		i++;
 	}
 }
+
 function printLoopDoWhile() {
 	const printResult = document.getElementById("loopResult");
 	let i = 1;
@@ -108,6 +123,7 @@ document.getElementById("clearBtn").addEventListener("click", () => {
 });
 
 // ------------------------------ 3 ---------------------------------- //
+// создайте вирусную страницу с постоянно повторяющемся сообщением
 
 function spamThisPageToDeath() {
 	while (true) {
@@ -116,6 +132,7 @@ function spamThisPageToDeath() {
 }
 
 // ------------------------------ 4 ---------------------------------- //
+// запросите у пользователя 3 числа, отсортируйте эти числа по возрастанию
 
 function sortArr(input1, input2, input3) {
 	let first, second, third;
@@ -189,29 +206,35 @@ function sortNums() {
 	// sortArr(usrNum1, usrNum2, usrNum3);
 
 	// ----using my own function but this one is way better---
-	coolSortArr(usrNum1, usrNum2, usrNum3, 3);
+	// coolSortArr(usrNum1, usrNum2, usrNum3, 3);
 }
 
 // ------------------------------ 5 ---------------------------------- //
+// напишите код для цикла, который будет повторять числа от 0 до 15.
+// Для каждой итерации он будет проверять, является ли текущее число нечетным или четным,
+// и отображать сообщение на экране
 
 function evenNotEvenLoop() {
 	for (let i = 0; i <= 15; i++) {
 		if (i % 2 === 0) {
-			alert(i + " is even");
+			alert(i + " - чётное число");
 		} else {
-			alert(i + " is not even");
+			alert(i + " - нечётное число");
 		}
 	}
 }
 
 // ------------------------------ 6 ---------------------------------- //
+// Запросить у пользователя любое число больше 5,
+// в случае правильного ответа выдать окошко с поздравлением,
+// в случае неправильного ответа вывести повторное окно с вопросом
 
 function biggerThanFive(tryCount) {
 	let guess;
 	if (tryCount === 0) {
-		guess = prompt("What is your guess?");
+		guess = prompt("Ваше число?");
 	} else {
-		guess = prompt("What is your new guess?");
+		guess = prompt("Ваше новое предположение:");
 	}
 
 	if (guess === null) {
@@ -219,15 +242,16 @@ function biggerThanFive(tryCount) {
 	} else {
 		guess = parseInt(guess);
 		if (guess > 5) {
-			alert("Congrats my man!");
+			alert("Вы угадали!");
 		} else {
-			alert("You guessed wrong\nTry again");
+			alert("Вы не угадали\nПопробуйте ещё раз");
 			biggerThanFive(1);
 		}
 	}
 }
 
 // ------------------------------ 7 ---------------------------------- //
+// выведите четные числа от 8 до 20
 
 function evenfrom8To20() {
 	const resPar = document.getElementById("from8To20Res");
@@ -244,6 +268,7 @@ document.getElementById("clearEvenfrom8To20").addEventListener("click", (e) => {
 });
 
 // ------------------------------ 8 ---------------------------------- //
+// Выведите сумму всех чисел, кратных либо 3, либо 5(числа в диапазоне от 0 до 1000)
 
 function multiplesFrom0To1000() {
 	let sum = 0;
@@ -258,9 +283,10 @@ function multiplesFrom0To1000() {
 }
 
 // ------------------------------ 9 ---------------------------------- //
+// Используя цикли проверьте, является ли заданное число из 3 цифр числом армстронга
 
 function armstrongNumberCheck() {
-	let usrNum = prompt("Number: ");
+	let usrNum = prompt("Число: ");
 
 	if (usrNum === null) {
 		return;
@@ -276,16 +302,24 @@ function armstrongNumberCheck() {
 		}
 
 		if (usrNum === tmp) {
-			alert("This is an Armstrong Number");
+			alert("Это число Армстронга");
 		} else {
-			alert("This is not an Armstrong Number");
+			alert("Это не число Армстронга");
 		}
 	} else {
-		alert("Wrong input!\nThe number should be between 100 and 1000");
+		alert("Неверный ввод!\nЧисло должно быть в дипазоне от 100 до 1000");
 	}
 }
 
 // ------------------------------ 10 --------------------------------- //
+// используя циклы получите след изображение в консоли
+/*
+ *
+ * *
+ * * *
+ * * * *
+ * * * * *
+ */
 
 document.getElementById("printStarsBtn").addEventListener("click", (e) => {
 	for (let i = 1; i <= 5; i++) {

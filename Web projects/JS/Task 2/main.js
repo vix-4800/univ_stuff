@@ -1,11 +1,12 @@
-// const usrName = prompt("Давайте знакомиться.\nКак Вас зовут?");
+// Написать функцию для вывода на экран приветствия пользователю
+const usrName = prompt("Давайте знакомиться.\nКак Вас зовут?");
+if (usrName === null || usrName === "") {
+	alert("Ну и ладно...");
+}
 
-// if (usrName === null) {
-// 	alert("Ну и ладно...");
-// }
-
+// Запросить имя пользователя и приветствовать его по нажатию на любой элемент по Вашему выбору
 function greetUsr() {
-	if (usrName === null) {
+	if (usrName === null || usrName === "") {
 		alert("Привет, Аноним!");
 	} else {
 		alert("Привет, " + usrName + "!");
@@ -13,6 +14,7 @@ function greetUsr() {
 }
 document.getElementById("greetingBtn").addEventListener("click", greetUsr);
 
+// Напишите функцию min(a, b), которая возвращает меньшее из чисел a, b
 function findMin(a, b) {
 	if (parseInt(a) < parseInt(b)) {
 		return a;
@@ -21,6 +23,10 @@ function findMin(a, b) {
 	}
 }
 
+// написать функцию "Решение квадратного уравнения".
+// Добавьте в предыдущую функцию проверку на пустые значения,
+// а также предусмотрите возможность нажатия кнопки "отмена".
+// Кроме того, предусмотрите все возможные варианты значения дискриминанта (больше нуля, меньше нуля, равен нулю)
 function squareEquation() {
 	// Дискриминант меньше нуля: 3*x^2 - 4*x + 2 = 0
 	// Дискриминант равен нулю: x^2 - 6*x + 9 = 0
@@ -80,6 +86,7 @@ function squareEquationClear() {
 }
 
 // --------------- Calculator --------------- //
+// Создайте калькулятор, выполняющий простейшие арифметические действия
 const display = document.querySelector(".display-context");
 const currOperationDisplay = document.querySelector(".current-operation");
 display.innerHTML = "";

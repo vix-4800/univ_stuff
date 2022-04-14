@@ -10,6 +10,7 @@
 .square-equation > input {
 	width: 50px;
 }
+
 /* ------------------------------------------------------------------------------ */
 
 .calc-container {
@@ -33,7 +34,9 @@
 
 .display {
 	-ms-grid-row: 1;
+	grid-row: 1;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	-ms-grid-column-span: 7;
 	position: relative;
 	grid-area: disp;
@@ -53,94 +56,130 @@
 }
 .AC {
 	-ms-grid-row: 3;
+	grid-row: 3;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	-ms-grid-column-span: 3;
 	grid-area: AC;
 }
 .n1 {
 	-ms-grid-row: 9;
+	grid-row: 9;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	grid-area: n1;
 }
 .n2 {
 	-ms-grid-row: 9;
+	grid-row: 9;
 	-ms-grid-column: 3;
+	grid-column: 3;
 	grid-area: n2;
 }
 .n3 {
 	-ms-grid-row: 9;
+	grid-row: 9;
 	-ms-grid-column: 5;
+	grid-column: 5;
 	grid-area: n3;
 }
 .n4 {
 	-ms-grid-row: 7;
+	grid-row: 7;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	grid-area: n4;
 }
 .n5 {
 	-ms-grid-row: 7;
+	grid-row: 7;
 	-ms-grid-column: 3;
+	grid-column: 3;
 	grid-area: n5;
 }
 .n6 {
 	-ms-grid-row: 7;
+	grid-row: 7;
 	-ms-grid-column: 5;
+	grid-column: 5;
 	grid-area: n6;
 }
 .n7 {
 	-ms-grid-row: 5;
+	grid-row: 5;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	grid-area: n7;
 }
 .n8 {
 	-ms-grid-row: 5;
+	grid-row: 5;
 	-ms-grid-column: 3;
+	grid-column: 3;
 	grid-area: n8;
 }
 .n9 {
 	-ms-grid-row: 5;
+	grid-row: 5;
 	-ms-grid-column: 5;
+	grid-column: 5;
 	grid-area: n9;
 }
 .n0 {
 	-ms-grid-row: 11;
+	grid-row: 11;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	-ms-grid-column-span: 3;
 	grid-area: n0;
 }
 .clear {
 	-ms-grid-row: 3;
+	grid-row: 3;
 	-ms-grid-column: 5;
+	grid-column: 5;
 	grid-area: clear;
 }
 .division {
+	grid-row: 3;
 	-ms-grid-row: 3;
 	-ms-grid-column: 7;
+	grid-column: 7;
 	grid-area: division;
 }
 .mult {
 	-ms-grid-row: 5;
+	grid-row: 5;
 	-ms-grid-column: 7;
+	grid-column: 7;
 	grid-area: mult;
 }
 .minus {
 	-ms-grid-row: 7;
+	grid-row: 7;
 	-ms-grid-column: 7;
+	grid-column: 7;
 	grid-area: minus;
 }
 .plus {
 	-ms-grid-row: 9;
+	grid-row: 9;
 	-ms-grid-column: 7;
+	grid-column: 7;
 	grid-area: plus;
 }
 .equalSign {
 	-ms-grid-row: 11;
+	grid-row: 11;
 	-ms-grid-column: 7;
+	grid-column: 7;
 	grid-area: equalSign;
 }
 .dot {
 	-ms-grid-row: 11;
+	grid-row: 11;
 	-ms-grid-column: 5;
+	grid-column: 5;
 	grid-area: dot;
 }
 

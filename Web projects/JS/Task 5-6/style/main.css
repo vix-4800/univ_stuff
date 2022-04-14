@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans");
 
+/* ------------------------------------ VARIABLES ------------------------------------ */
+
 :root {
 	--blue-color: #5e81f4;
 }
@@ -25,6 +27,8 @@
 	--input-font-color: rgba(118, 132, 146, 0.8);
 }
 
+/* ------------------------------------ GLOBAL STYLES ------------------------------------ */
+
 * {
 	-webkit-transition: background-color 0.6s ease, color 1s ease;
 	-o-transition: background-color 0.6s ease, color 1s ease;
@@ -48,15 +52,6 @@ ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-}
-
-.bg-gray > p {
-	overflow: hidden;
-	color: var(--main-font-color);
-}
-
-.upgrade > div {
-	background-color: var(--bg-gray);
 }
 
 .bg-blue {
@@ -86,6 +81,8 @@ main {
 	transition: grid-template-columns ease-in-out 500ms,
 		-ms-grid-columns ease-in-out 500ms;
 }
+
+/* ------------------------------------ LEFT SECTION ------------------------------------ */
 
 .left {
 	background-color: var(--light-bg);
@@ -237,6 +234,11 @@ a:hover,
 	transform: scale(1, 1);
 }
 
+.menu ul li:hover a span {
+	color: var(--blue-color);
+	transition: color ease-in-out 200ms;
+}
+
 .upgrade {
 	width: 70.588%;
 	height: 30.72%;
@@ -270,6 +272,12 @@ a:hover,
 	-ms-flex-direction: column-reverse;
 	flex-direction: column-reverse;
 	gap: 6.466%;
+	background-color: var(--bg-gray);
+}
+
+.bg-gray > p {
+	overflow: hidden;
+	color: var(--main-font-color);
 }
 
 .upgrade > img {
@@ -301,6 +309,8 @@ a:hover,
 	border: none;
 	padding: 1em 2.25em 1.0625em 2.5em;
 }
+
+/* ------------------------------------ MIDDLE SECTION ------------------------------------ */
 
 .middle {
 	background-color: var(--bg-gray);
@@ -626,6 +636,8 @@ input[type="text"] {
 	gap: 3.1875vw;
 }
 
+/* ------------------------------------ RIGHT SECTION ------------------------------------ */
+
 .right {
 	background-color: var(--light-bg);
 	display: -webkit-box;
@@ -777,6 +789,7 @@ input[type="text"] {
 	);
 	background: linear-gradient(180deg, var(--light-bg), var(--options-clr));
 	background-size: 0% 400%;
+	transition: background 0.6s ease, background-size 0.6s;
 }
 
 @-webkit-keyframes gradient-change {
@@ -820,43 +833,30 @@ input[type="text"] {
 	}
 }
 
+/* ------------------------------------ PROFILE MENU ------------------------------------ */
+
 .login-options {
 	position: absolute;
 	border-radius: 0 0 10px 10px;
 	width: 100%;
 	height: 675%;
 	background-color: var(--options-clr);
-	-webkit-transition: background-color 350ms;
-	-o-transition: background-color 350ms;
-	transition: background-color 350ms;
+	transition: background-color 600ms ease,
+		transform 450ms cubic-bezier(0.39, 0.58, 0.57, 1);
 	top: 100%;
-	-webkit-transform: scaleY(0%);
-	-ms-transform: scaleY(0%);
 	transform: scaleY(0%);
-	-webkit-transform-origin: top;
-	-ms-transform-origin: top;
 	transform-origin: top;
-	-webkit-transition: -webkit-transform 350ms;
-	transition: -webkit-transform 350ms;
-	-o-transition: transform 350ms;
-	transition: transform 350ms;
-	transition: transform 350ms, -webkit-transform 350ms;
 	z-index: 5;
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 1fr;
 	grid-template-columns: 1fr;
-	-ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas: "dashboard", "profile", "settings", "Log out",
 		"settings";
-
 	overflow: hidden;
 }
 
 .login-options[data-visibility="true"] {
-	-webkit-transform: scaleY(100%);
-	-ms-transform: scaleY(100%);
 	transform: scaleY(100%);
 }
 
@@ -865,12 +865,7 @@ input[type="text"] {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 	border-bottom: 1px solid #011f3b;
 	border-radius: 7px 7px 0 0;
