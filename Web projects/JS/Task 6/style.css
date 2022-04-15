@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.question-container {
+	margin: 15px 50px 15px 25px;
+	border-bottom: 1px solid black;
+	padding-bottom: 15px;
+}
+
+label {
+	margin-right: 15px;
+}
