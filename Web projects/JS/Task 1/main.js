@@ -3,7 +3,7 @@
 // console.log("number" + 15 + 3); // number153
 // console.log(15 + 3 + "number"); // 18number
 // console.log("1" > null); // true
-// console.log("foo" + "bar"); // foobar
+// console.log("foo" + + "bar"); // fooNaN
 // console.log("true" == true); // false
 // console.log(false == "false"); // false
 // console.log(null == ""); // false
@@ -127,7 +127,7 @@ document.getElementById("clearBtn").addEventListener("click", () => {
 
 function spamThisPageToDeath() {
 	while (true) {
-		alert("Купи!!!1!");
+		alert("Купи!!!!!");
 	}
 }
 
@@ -169,7 +169,7 @@ function sortArr(input1, input2, input3) {
 	alert("Your numbers are now sorted! Look: " + sortedArr);
 }
 
-function coolSortArr(input1, input2, input3, arrSize) {
+function insersionSort(input1, input2, input3, arrSize) {
 	let sortedArr = [input1, input2, input3];
 	let min = 0;
 	let buf = 0;
@@ -194,19 +194,17 @@ function sortNums() {
 	const usrNum3 = parseInt(prompt("And the last one: "));
 
 	// -----------using .sort() function-----------
-	/*
 	const inputArray = [usrNum1, usrNum2, usrNum3];
 	inputArray.sort(function (a, b) {
 		return a - b;
 	});
 	alert("Your numbers are now sorted! Look: " + inputArray);
-	*/
 
 	// -----------using my own function-----------
 	// sortArr(usrNum1, usrNum2, usrNum3);
 
 	// ----using my own function but this one is way better---
-	// coolSortArr(usrNum1, usrNum2, usrNum3, 3);
+	// insersionSort(usrNum1, usrNum2, usrNum3, 3);
 }
 
 // ------------------------------ 5 ---------------------------------- //
@@ -268,7 +266,7 @@ document.getElementById("clearEvenfrom8To20").addEventListener("click", (e) => {
 });
 
 // ------------------------------ 8 ---------------------------------- //
-// Выведите сумму всех чисел, кратных либо 3, либо 5(числа в диапазоне от 0 до 1000)
+// Выведите сумму всех чисел кратных либо 3, либо 5(числа в диапазоне от 0 до 1000)
 
 function multiplesFrom0To1000() {
 	let sum = 0;

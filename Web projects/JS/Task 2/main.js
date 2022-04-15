@@ -1,10 +1,10 @@
 // Написать функцию для вывода на экран приветствия пользователю
+// Запросить имя пользователя и приветствовать его по нажатию на любой элемент по Вашему выбору
 const usrName = prompt("Давайте знакомиться.\nКак Вас зовут?");
 if (usrName === null || usrName === "") {
 	alert("Ну и ладно...");
 }
 
-// Запросить имя пользователя и приветствовать его по нажатию на любой элемент по Вашему выбору
 function greetUsr() {
 	if (usrName === null || usrName === "") {
 		alert("Привет, Аноним!");
@@ -82,7 +82,7 @@ function squareEquationClear() {
 	document.getElementById("value1").value = "";
 	document.getElementById("value2").value = "";
 	document.getElementById("value3").value = "";
-	document.getElementById("square-equation-res").innerHTML = "";
+	document.getElementById("square-equation-res").innerHTML = "=>";
 }
 
 // --------------- Calculator --------------- //

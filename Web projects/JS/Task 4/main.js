@@ -55,7 +55,6 @@ student2.currDegree = function () {
 };
 
 // JavaScript Object Constructors
-
 function Student(sfirstName, sLastName, sCity, sUniv) {
 	this.firstName = sfirstName;
 	this.lastName = sLastName;
