@@ -165,15 +165,74 @@ const usaStates = {
 	Флорида: ["Джэксонвилл", "Майами", "Орландо", "Сент-Питерсберг", "Тампа"],
 };
 
+// Список всех городов всех стран
+function Concert(
+	cSity,
+	blues,
+	jazz,
+	classical,
+	metal,
+	pop,
+	r_n_B,
+	rock,
+	hip_hop,
+	chanson,
+	electro
+) {
+	this.concertCity = cSity;
+	this.concerts_blues = blues;
+	this.concerts_jazz = jazz;
+	this.concerts_classical = classical;
+	this.concerts_metal = metal;
+	this.concerts_pop = pop;
+	this.concerts_r_n_B = r_n_B;
+	this.concerts_rock = rock;
+	this.concerts_hip_hop = hip_hop;
+	this.concerts_chanson = chanson;
+	this.concerts_electro = electro;
+}
+
+let concertList = [223];
+let j = 0;
+for (const key in cities) {
+	for (i = 0; i < cities[key].length; i++) {
+		concertList[j] = cities[key][i];
+		j++;
+	}
+}
+for (const key in usaStates) {
+	for (i = 0; i < usaStates[key].length; i++) {
+		concertList[j] = usaStates[key][i];
+		j++;
+	}
+}
+const jazz_concerts = ["бар острые косырьки", "бар бешеных собак"];
+const adelaida = new Concert(
+	"Аделаида",
+	jazz_concerts,
+	jazz_concerts,
+	jazz_concerts,
+	jazz_concerts,
+	jazz_concerts,
+	jazz_concerts,
+	jazz_concerts,
+	jazz_concerts,
+	jazz_concerts,
+	jazz_concerts
+);
+console.log(adelaida);
+
+// Переменные всех полей ввода и полей выбора
 const countrySel = document.getElementById("country");
 const citySel = document.getElementById("city");
 const stateSel = document.getElementById("state");
+const genreSel = document.getElementById("genre");
+const dateInpt = document.getElementById("date");
 
 for (let key in cities) {
 	countrySel.innerHTML =
 		countrySel.innerHTML + "<option>" + key + "</option>";
 }
-
 for (let key in usaStates) {
 	stateSel.innerHTML = stateSel.innerHTML + "<option>" + key + "</option>";
 }
@@ -217,17 +276,23 @@ countrySel.addEventListener("change", function updateCityList(e) {
 });
 
 // ------------------------------- Поиск подходящего фильма --------------------------------
-
+const resultsDiv = document.querySelector(".result");
 let resultsShown = false;
-function findResults() {
-	const resultsDiv = document.querySelector(".result");
-	if (resultsShown === false) {
-		resultsShown = true;
-		resultsDiv.setAttribute("data-visible", true);
-		resultsDiv.setAttribute("style", "display:block");
-	} else {
-		resultsShown = false;
-		resultsDiv.setAttribute("data-visible", false);
-		resultsDiv.setAttribute("style", "display:none");
-	}
-}
+document
+	.getElementById("find-results-btn")
+	.addEventListener("click", function findResults() {
+		if (resultsShown === false) {
+			resultsShown = true;
+			resultsDiv.setAttribute("data-visible", true);
+			resultsDiv.setAttribute("style", "display:block");
+		}
+
+		const selectedCountry =
+			countrySel.options[countrySel.selectedIndex].value;
+		const selectedCity = citySel.options[citySel.selectedIndex].value;
+		if (countrySel.value === "Соединенные Штаты Америки") {
+			const selectedState =
+				stateSel.options[stateSel.selectedIndex].value;
+		}
+		const dateSelected = dateInpt.value;
+	});
