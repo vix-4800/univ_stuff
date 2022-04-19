@@ -4,10 +4,14 @@ function changeTheme() {
     const body = document.querySelector(".light-theme");
     body.classList.toggle("dark-theme");
     if (darkThemeStatus === false) {
-        document.getElementById("theme-icon-path").setAttribute("fill", "black");
+        document
+            .getElementById("theme-icon-path")
+            .setAttribute("fill", "black");
         darkThemeStatus = true;
     } else {
-        document.getElementById("theme-icon-path").setAttribute("fill", "white");
+        document
+            .getElementById("theme-icon-path")
+            .setAttribute("fill", "white");
         darkThemeStatus = false;
     }
 }
@@ -20,7 +24,14 @@ const durationSel = document.getElementById("duration");
 const ratingSel = document.getElementById("rating");
 
 // All the films
-function Film(filmCountry, filmName, filmYear, filmGenre, filmDuration, filmRating) {
+function Film(
+    filmCountry,
+    filmName,
+    filmYear,
+    filmGenre,
+    filmDuration,
+    filmRating,
+) {
     this.name = filmName;
     this.country = filmCountry;
     this.year = filmYear;
@@ -33,10 +44,38 @@ const movies = [
     // ------------------------------ North America ------------------------------
     new Film(["USA"], "The Shawshank Redemption", 1994, ["drama"], 144, 9.3),
     new Film(["USA"], "The Godfather", 1972, ["drama", "crime"], 175, 9.2),
-    new Film(["USA", "UK"], "The Dark Knight", 2008, ["action", "crime", "drama"], 152, 9.0),
-    new Film(["USA"], "The Batman", 2022, ["action", "crime", "drama"], 176, 8.3),
-    new Film(["USA", "Canada"], "Joker", 2019, ["crime", "drama", "thriller"], 122, 8.4),
-    new Film(["USA"], "Avengers: Endgame", 2019, ["action", "adventure", "drama"], 181, 8.4),
+    new Film(
+        ["USA", "UK"],
+        "The Dark Knight",
+        2008,
+        ["action", "crime", "drama"],
+        152,
+        9.0,
+    ),
+    new Film(
+        ["USA"],
+        "The Batman",
+        2022,
+        ["action", "crime", "drama"],
+        176,
+        8.3,
+    ),
+    new Film(
+        ["USA", "Canada"],
+        "Joker",
+        2019,
+        ["crime", "drama", "thriller"],
+        122,
+        8.4,
+    ),
+    new Film(
+        ["USA"],
+        "Avengers: Endgame",
+        2019,
+        ["action", "adventure", "drama"],
+        181,
+        8.4,
+    ),
     new Film(
         ["USA"],
         "Spider-Man: No Way Home",
@@ -61,7 +100,14 @@ const movies = [
         182,
         7.8,
     ),
-    new Film(["USA", "Mexico"], "Titanic", 1997, ["drama", "romance"], 194, 9.3),
+    new Film(
+        ["USA", "Mexico"],
+        "Titanic",
+        1997,
+        ["drama", "romance"],
+        194,
+        9.3,
+    ),
     new Film(
         ["USA", "UK", "Canada", "Spain"],
         "Blade Runner 2049",
@@ -78,8 +124,22 @@ const movies = [
         242,
         8.1,
     ),
-    new Film(["USA", "Canada"], "Dune", 2021, ["action", "adventure", "drama"], 155, 8.1),
-    new Film(["USA"], "The Wolf of Wall Street", 2013, ["biography", "comedy", "crime"], 180, 8.2),
+    new Film(
+        ["USA", "Canada"],
+        "Dune",
+        2021,
+        ["action", "adventure", "drama"],
+        155,
+        8.1,
+    ),
+    new Film(
+        ["USA"],
+        "The Wolf of Wall Street",
+        2013,
+        ["biography", "comedy", "crime"],
+        180,
+        8.2,
+    ),
     new Film(
         ["USA", "UK", "China"],
         "Once Upon a Time... In Hollywood",
@@ -113,15 +173,64 @@ const movies = [
         121,
         7.6,
     ),
-    new Film(["Mexico", "USA"], "Predator", 1987, ["action", "adventure", "horror"], 107, 7.8),
+    new Film(
+        ["Mexico", "USA"],
+        "Predator",
+        1987,
+        ["action", "adventure", "horror"],
+        107,
+        7.8,
+    ),
     new Film(["Mexico"], "Y tu mamá también", 2001, ["drama"], 106, 7.7),
     new Film(["Mexico", "USA"], "Roma", 2018, ["drama"], 135, 7.7),
-    new Film(["Mexico"], "The Holy Mountain", 1973, ["adventure", "drama", "fantasy"], 104, 7.8),
-    new Film(["Mexico"], "The Exterminating Angel", 1962, ["drama", "fantasy"], 95, 8.0),
-    new Film(["Canada", "France", "USA"], "CODA", 2021, ["comedy", "drama", "music"], 111, 8.0),
-    new Film(["Canada", "USA"], "American Psycho", 2000, ["crime", "drama", "horror"], 102, 7.6),
-    new Film(["Canada", "USA"], "Iron Man", 2008, ["action", "adventure", "sci_fi"], 126, 7.9),
-    new Film(["Canada", "USA", "Bulgaria"], "300", 2006, ["action", "drama"], 117, 7.6),
+    new Film(
+        ["Mexico"],
+        "The Holy Mountain",
+        1973,
+        ["adventure", "drama", "fantasy"],
+        104,
+        7.8,
+    ),
+    new Film(
+        ["Mexico"],
+        "The Exterminating Angel",
+        1962,
+        ["drama", "fantasy"],
+        95,
+        8.0,
+    ),
+    new Film(
+        ["Canada", "France", "USA"],
+        "CODA",
+        2021,
+        ["comedy", "drama", "music"],
+        111,
+        8.0,
+    ),
+    new Film(
+        ["Canada", "USA"],
+        "American Psycho",
+        2000,
+        ["crime", "drama", "horror"],
+        102,
+        7.6,
+    ),
+    new Film(
+        ["Canada", "USA"],
+        "Iron Man",
+        2008,
+        ["action", "adventure", "sci_fi"],
+        126,
+        7.9,
+    ),
+    new Film(
+        ["Canada", "USA", "Bulgaria"],
+        "300",
+        2006,
+        ["action", "drama"],
+        117,
+        7.6,
+    ),
     new Film(["Canada", "USA"], "Arrival", 2016, ["drama", "sci_fi"], 116, 7.9),
     new Film(
         ["Canada", "USA"],
@@ -131,7 +240,14 @@ const movies = [
         141,
         8.1,
     ),
-    new Film(["Canada", "USA", "UK", "Ireland"], "Room", 2015, ["drama", "thriller"], 118, 8.1),
+    new Film(
+        ["Canada", "USA", "UK", "Ireland"],
+        "Room",
+        2015,
+        ["drama", "thriller"],
+        118,
+        8.1,
+    ),
     new Film(
         ["Canada", "USA"],
         "Edge of Tomorrow",
@@ -159,29 +275,106 @@ const movies = [
         8.0,
     ),
     new Film(["India"], "RRR", 2022, ["action", "drama"], 187, 8.9),
-    new Film(["India"], "K.G.F: Chapter 2", 2022, ["action", "crime", "drama"], 168, 9.6),
-    new Film(["India"], "Anbe Sivam", 2003, ["drama", "adventure", "comedy"], 160, 8.7),
-    new Film(["India"], "Jai Bhim", 2021, ["crime", "drama", "mystery"], 164, 9.4),
+    new Film(
+        ["India"],
+        "K.G.F: Chapter 2",
+        2022,
+        ["action", "crime", "drama"],
+        168,
+        9.6,
+    ),
+    new Film(
+        ["India"],
+        "Anbe Sivam",
+        2003,
+        ["drama", "adventure", "comedy"],
+        160,
+        8.7,
+    ),
+    new Film(
+        ["India"],
+        "Jai Bhim",
+        2021,
+        ["crime", "drama", "mystery"],
+        164,
+        9.4,
+    ),
     new Film(["India"], "Hanky Panky", 1979, ["comedy", "romance"], 120, 8.5),
     new Film(["India"], "Nayakan", 1987, ["crime", "drama"], 145, 8.7),
     new Film(["India"], "Pariyerum Perumal", 2018, ["drama"], 154, 8.8),
     new Film(["India"], "The World of Apu", 1959, ["drama"], 105, 8.5),
     new Film(["India"], "3 Idiots", 2009, ["comedy", "drama"], 170, 8.4),
-    new Film(["India"], "Manichithrathazhu", 1993, ["comedy", "horror", "music"], 169, 8.8),
+    new Film(
+        ["India"],
+        "Manichithrathazhu",
+        1993,
+        ["comedy", "horror", "music"],
+        169,
+        8.8,
+    ),
     new Film(["India"], "Black Friday", 2004, [], 143, 8.4),
     new Film(["India"], "Kumbalangi Nights", 2019, [], 135, 8.6),
     new Film(["India"], "Like Stars on Earth", 2007, [], 165, 8.4),
-    new Film(["India", "USA"], "Dangal", 2016, ["action", "drama", "biography"], 161, 8.4),
-    new Film(["Iran", "France", "Australia"], "A Separation", 2011, ["drama"], 123, 8.3),
-    new Film(["Iran"], "Children of Heaven", 1997, ["drama", "family", "sport"], 89, 8.2),
+    new Film(
+        ["India", "USA"],
+        "Dangal",
+        2016,
+        ["action", "drama", "biography"],
+        161,
+        8.4,
+    ),
+    new Film(
+        ["Iran", "France", "Australia"],
+        "A Separation",
+        2011,
+        ["drama"],
+        123,
+        8.3,
+    ),
+    new Film(
+        ["Iran"],
+        "Children of Heaven",
+        1997,
+        ["drama", "family", "sport"],
+        89,
+        8.2,
+    ),
     new Film(["Iran", "France"], "The Salesman", 2016, ["drama"], 124, 7.7),
 
     // ------------------------------ Europe -----------------------------------
     // France
-    new Film(["France"], "The Intouchables", 2011, ["biography", "comedy", "drama"], 112, 8.5),
-    new Film(["France", "Germany"], "Amélie", 2001, ["comedy", "romance"], 122, 8.3),
-    new Film(["France"], "Incendies", 2010, ["drama", "mystery", "war"], 131, 8.3),
-    new Film(["France"], "Blue Is the Warmest Colour", 2013, ["drama", "romance"], 180, 7.7),
+    new Film(
+        ["France"],
+        "The Intouchables",
+        2011,
+        ["biography", "comedy", "drama"],
+        112,
+        8.5,
+    ),
+    new Film(
+        ["France", "Germany"],
+        "Amélie",
+        2001,
+        ["comedy", "romance"],
+        122,
+        8.3,
+    ),
+    new Film(
+        ["France"],
+        "Incendies",
+        2010,
+        ["drama", "mystery", "war"],
+        131,
+        8.3,
+    ),
+    new Film(
+        ["France"],
+        "Blue Is the Warmest Colour",
+        2013,
+        ["drama", "romance"],
+        180,
+        7.7,
+    ),
     new Film(
         ["France", "Poland", "Switzerland"],
         "Three Colors: Blue",
@@ -208,7 +401,14 @@ const movies = [
     ),
     new Film(["France"], "Taxi", 1998, ["action", "comedy", "crime"], 86, 6.9),
     // Germany
-    new Film(["Germany"], "Run Lola Run", 1998, ["crime", "drama", "thriller"], 80, 7.7),
+    new Film(
+        ["Germany"],
+        "Run Lola Run",
+        1998,
+        ["crime", "drama", "thriller"],
+        80,
+        7.7,
+    ),
     new Film(["Germany", "USA"], "Fight Club", 1999, ["drama"], 139, 8.8),
     new Film(
         ["Germany", "USA"],
@@ -260,8 +460,22 @@ const movies = [
         144,
         7.8,
     ),
-    new Film(["Austria", "Germany", "France"], "Amour", 2012, ["drama"], 127, 7.9),
-    new Film(["Austria", "USA"], "Before Sunrise", 1995, ["drama", "romance"], 101, 8.1),
+    new Film(
+        ["Austria", "Germany", "France"],
+        "Amour",
+        2012,
+        ["drama"],
+        127,
+        7.9,
+    ),
+    new Film(
+        ["Austria", "USA"],
+        "Before Sunrise",
+        1995,
+        ["drama", "romance"],
+        101,
+        8.1,
+    ),
     new Film(
         ["Germany", "Austria", "France", "Greece", "Yugoslavia"],
         "Black Cat, White Cat",
@@ -296,7 +510,16 @@ const movies = [
         7.9,
     ),
     new Film(
-        ["Czech", "Yugoslavia", "France", "Germany", "Bulgaria", "Hungary", "UK", "USA"],
+        [
+            "Czech",
+            "Yugoslavia",
+            "France",
+            "Germany",
+            "Bulgaria",
+            "Hungary",
+            "UK",
+            "USA",
+        ],
         "Underground",
         1995,
         ["comedy", "drama", "fantasy"],
@@ -368,7 +591,14 @@ const movies = [
         7.9,
     ),
     // Greece
-    new Film(["Greece", "USA"], "Before Midnight", 2013, ["drama", "romance"], 109, 7.9),
+    new Film(
+        ["Greece", "USA"],
+        "Before Midnight",
+        2013,
+        ["drama", "romance"],
+        109,
+        7.9,
+    ),
     // Italy
     new Film(
         ["Italy", "USA", "France", "Brazil"],
@@ -378,7 +608,14 @@ const movies = [
         134,
         7.9,
     ),
-    new Film(["Italy", "USA"], "Once Upon a Time in America", 1984, ["drama", "crime"], 229, 8.3),
+    new Film(
+        ["Italy", "USA"],
+        "Once Upon a Time in America",
+        1984,
+        ["drama", "crime"],
+        229,
+        8.3,
+    ),
     new Film(
         ["Italy", "Germany", "Spain"],
         "The Good, the Bad and the Ugly",
@@ -387,7 +624,14 @@ const movies = [
         178,
         8.8,
     ),
-    new Film(["Italy", "USA"], "Once Upon a Time in the West", 1968, ["western"], 165, 8.5),
+    new Film(
+        ["Italy", "USA"],
+        "Once Upon a Time in the West",
+        1968,
+        ["western"],
+        165,
+        8.5,
+    ),
     new Film(
         ["Italy", "Spain", "USA", "France"],
         "The Others",
@@ -438,7 +682,14 @@ const movies = [
         98,
         7.7,
     ),
-    new Film(["Norway", "Denmark", "UK", "Sweden"], "After the Wedding", 2006, ["drama"], 120, 7.7),
+    new Film(
+        ["Norway", "Denmark", "UK", "Sweden"],
+        "After the Wedding",
+        2006,
+        ["drama"],
+        120,
+        7.7,
+    ),
     // Poland
     new Film(
         ["Poland", "France", "Switzerland"],
@@ -457,7 +708,14 @@ const movies = [
         7.8,
     ),
     // Romania
-    new Film(["Romania", "Belgium"], "4 Months, 3 Weeks and 2 Days", 2007, ["drama"], 113, 7.9),
+    new Film(
+        ["Romania", "Belgium"],
+        "4 Months, 3 Weeks and 2 Days",
+        2007,
+        ["drama"],
+        113,
+        7.9,
+    ),
     new Film(
         ["Romania", "France", "Germany", "UK", "Belgium"],
         "Joyeux Noel",
@@ -467,7 +725,14 @@ const movies = [
         7.7,
     ),
     // Russia
-    new Film(["Russia", "USA"], "Searching", 2018, ["drama", "mystery", "thriller"], 102, 7.6),
+    new Film(
+        ["Russia", "USA"],
+        "Searching",
+        2018,
+        ["drama", "mystery", "thriller"],
+        102,
+        7.6,
+    ),
     new Film(["Russia"], "Leviathan", 2014, ["crime", "drama"], 140, 7.6),
     new Film(["Russia"], "The Return", 2003, ["drama"], 110, 7.9),
     // Spain
@@ -479,8 +744,22 @@ const movies = [
         164,
         8.0,
     ),
-    new Film(["Spain", "USA", "UK", "India"], "1917", 2019, ["action", "drama", "war"], 119, 8.3),
-    new Film(["Spain"], "The Invisible Guest", 2016, ["crime", "drama", "mystery"], 106, 8.0),
+    new Film(
+        ["Spain", "USA", "UK", "India"],
+        "1917",
+        2019,
+        ["action", "drama", "war"],
+        119,
+        8.3,
+    ),
+    new Film(
+        ["Spain"],
+        "The Invisible Guest",
+        2016,
+        ["crime", "drama", "mystery"],
+        106,
+        8.0,
+    ),
     new Film(
         ["Spain", "USA", "Germany", "France"],
         "The Bourne Ultimatum",
@@ -523,7 +802,14 @@ const movies = [
         7.9,
     ),
     // Sweden
-    new Film(["Sweden"], "Let the Right One In", 2008, ["drama", "fantasy", "horror"], 114, 7.9),
+    new Film(
+        ["Sweden"],
+        "Let the Right One In",
+        2008,
+        ["drama", "fantasy", "horror"],
+        114,
+        7.9,
+    ),
     new Film(
         ["Sweden", "Denmark", "Netherlands"],
         "Another Round",
@@ -533,7 +819,14 @@ const movies = [
         7.7,
     ),
     // Turkey
-    new Film(["Turkey", "USA", "UK"], "Skyfall", 2012, ["action", "adventure"], 143, 7.8),
+    new Film(
+        ["Turkey", "USA", "UK"],
+        "Skyfall",
+        2012,
+        ["action", "adventure"],
+        143,
+        7.8,
+    ),
     new Film(
         ["Turkey"],
         "Ayla: The Daughter of War",
@@ -542,7 +835,14 @@ const movies = [
         125,
         8.4,
     ),
-    new Film(["Turkey", "France", "Germany"], "Winter Sleep", 2014, ["drama"], 196, 8.1),
+    new Film(
+        ["Turkey", "France", "Germany"],
+        "Winter Sleep",
+        2014,
+        ["drama"],
+        196,
+        8.1,
+    ),
 
     // ------------------------------ Africa -------------------------------------
     new Film(
@@ -587,7 +887,14 @@ const movies = [
         120,
         8.1,
     ),
-    new Film(["Australia", "USA"], "The Matrix", 1999, ["action", "sci_Fi"], 136, 8.7),
+    new Film(
+        ["Australia", "USA"],
+        "The Matrix",
+        1999,
+        ["action", "sci_Fi"],
+        136,
+        8.7,
+    ),
     new Film(
         ["Australia", "USA"],
         "Thor: Ragnarok",
@@ -604,118 +911,12 @@ const movies = [
         128,
         7.6,
     ),
-    new Film(["Australia", "USA"], "Crash", 2004, ["crime", "drama", "thriller"], 112, 7.8),
+    new Film(
+        ["Australia", "USA"],
+        "Crash",
+        2004,
+        ["crime", "drama", "thriller"],
+        112,
+        7.8,
+    ),
 ];
-
-// Get select values
-function getResults() {
-    const countryChosen = countrySel.options[countrySel.selectedIndex].text;
-    const yearChosen = yearSel.options[yearSel.selectedIndex].value;
-    const genreChosen = genreSel.options[genreSel.selectedIndex].value;
-    const durationChosen = durationSel.options[durationSel.selectedIndex].value;
-    const ratingChosen = ratingSel.options[ratingSel.selectedIndex].value;
-
-    const results = new Array();
-
-    for (let i = 0; i < movies.length; i++) {
-        // Year check
-        if (
-            (yearChosen == "late" && parseInt(movies[i].year) < 2021) ||
-            (yearChosen == "11-20" &&
-                (parseInt(movies[i].year) > 2020 || parseInt(movies[i].year) < 2011)) ||
-            (yearChosen == "01-10" && parseInt(movies[i].year) > 2010) ||
-            parseInt(movies[i].year) < 2001 ||
-            (yearChosen == "91-00" && parseInt(movies[i].year) > 2000) ||
-            parseInt(movies[i].year) < 1991 ||
-            (yearChosen == "early" && parseInt(movies[i].year) > 1990)
-        ) {
-            continue;
-        } else if (
-            yearChosen != movies[i].year &&
-            yearChosen != "early" &&
-            yearChosen != "91-00" &&
-            yearChosen != "01-10" &&
-            yearChosen != "11-20" &&
-            yearChosen != "late" &&
-            yearChosen != "any"
-        ) {
-            console.log("hello");
-            continue;
-        }
-
-        // Country check
-        let tempCheck;
-        tempCheck = 0;
-        for (let k = 0; k < movies[i].country.length; k++) {
-            if (countryChosen == movies[i].country[k] || countryChosen == "Any country") {
-                tempCheck++;
-            }
-        }
-        if (tempCheck == 0) {
-            continue;
-        }
-
-        // Genre check
-        tempCheck = 0;
-        for (let k = 0; k < movies[i].genre.length; k++) {
-            if (genreChosen == movies[i].genre[k] || genreChosen == "any") {
-                tempCheck++;
-            }
-        }
-        if (tempCheck == 0) {
-            continue;
-        }
-
-        // Duration check
-        if (movies[i].duration < 60) {
-            tempCheck = "short";
-        } else if (movies[i].duration >= 60 && movies[i].duration <= 90) {
-            tempCheck = "60-90";
-        } else if (movies[i].duration >= 90 && movies[i].duration <= 120) {
-            tempCheck = "90-120";
-        } else {
-            tempCheck = "long";
-        }
-        if (durationChosen != tempCheck && durationChosen != "any") {
-            continue;
-        }
-
-        // Rating check
-        if (
-            ratingChosen == (9 || 8 || 7 || 6 || 5) &&
-            movies[i].rating < parseFloat(ratingChosen)
-        ) {
-            continue;
-        } else if (ratingChosen == "low" && movies[i].rating > 5.0) {
-            continue;
-        }
-
-        results.push(movies[i]);
-    }
-
-    const resultsSection = document.getElementById("results");
-    const resultsHeader = document.getElementById("areResults");
-    const resultsMovies = document.getElementById("movies");
-
-    resultsHeader.innerHTML = "";
-    resultsMovies.innerHTML = "";
-    if (results.length === 0) {
-        resultsHeader.innerHTML = "No movies found";
-    } else {
-        resultsHeader.innerHTML = "Here are your movies";
-        for (let i = 0; i < results.length; i++) {
-            resultsMovies.innerHTML +=
-                "<span>" +
-                (i + 1) +
-                ") " +
-                "</span>" +
-                results[i].name +
-                " | " +
-                results[i].country +
-                " ( " +
-                results[i].year +
-                " )" +
-                "<br/>";
-        }
-    }
-}

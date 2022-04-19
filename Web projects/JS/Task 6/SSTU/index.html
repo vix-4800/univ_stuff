@@ -1,94 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Task 6</title>
-		<link rel="stylesheet" href="style.css" />
-		<script src="main.js" defer></script>
-	</head>
-	<!-- 
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task 6</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="main.js" defer></script>
+    </head>
+    <!-- 
 		Длительность обучения
 		Степень высшего образования
 		ЕГЭ по каким предметам вы сдавали?
 		Форма обучения (очка/заочка)
 		В какой сфере вы хотели бы работать (выберите до 5-ти ответов)?
 	-->
-	<body>
-		<section class="questions">
-			<div class="question-container" id="duration">
-				<label for="question-1">
-					Выберите предпочтительную длительность обучения:
-				</label>
-				<select id="question-1">
-					<option value="lt4">Меньше 4-ёх лет</option>
-					<option value="4t5" selected>От 4-ёх до 5-ти лет</option>
-					<option value="mt5">Больше 5-ти лет</option>
-				</select>
-				<button onclick="getValueDuration();">Submit</button>
-			</div>
+    <body>
+        <section class="questions">
+            <div class="question-container" id="duration">
+                <label for="question-1">
+                    Выберите предпочтительную длительность обучения:
+                </label>
+                <select id="question-1">
+                    <option value="lt4">Меньше 4-ёх лет</option>
+                    <option value="4t5" selected>От 4-ёх до 5-ти лет</option>
+                    <option value="mt5">Больше 5-ти лет</option>
+                </select>
+                <button onclick="getValueDuration();">Submit</button>
+            </div>
 
-			<p>
-				СГТУ имени Гагарина Ю.А. проводит набор на обучение по следующим
-				образовательным программам: бакалавриат, специалитет,
-				магистратура, аспирантура
-			</p>
-			<div class="question-container" id="degree">
-				<label for="question-2">
-					Выберите ступень высшего образования:
-				</label>
-				<select id="question-2">
-					<option value="bachelor" selected>Бакалавриат</option>
-					<option value="specialist">Специалитет</option>
-					<option value="master">Магистратура</option>
-					<option value="postgraduate">Аспирантура</option>
-				</select>
-				<button>Submit</button>
-			</div>
+            <p>
+                СГТУ имени Гагарина Ю.А. проводит набор на обучение по следующим
+                образовательным программам: бакалавриат, специалитет,
+                магистратура, аспирантура
+            </p>
+            <div class="question-container" id="degree">
+                <label for="question-2">
+                    Выберите ступень высшего образования:
+                </label>
+                <select id="question-2">
+                    <option value="bachelor" selected>Бакалавриат</option>
+                    <option value="specialist">Специалитет</option>
+                    <option value="master">Магистратура</option>
+                    <option value="postgraduate">Аспирантура</option>
+                </select>
+                <button>Submit</button>
+            </div>
 
-			<div class="question-container" id="exams">
-				<label for="question-3">
-					ЕГЭ по каким предметам вы сдавали (3-4 предмета)?
-				</label>
-				<select id="question-3" multiple size="10">
-					<option value="">Математика профильного уровня</option>
-					<option value="">Физика</option>
-					<option value="">Химия</option>
-					<option value="">История</option>
-					<option value="">Обществознание</option>
-					<option value="">Информатика</option>
-					<option value="">Биология</option>
-					<option value="">География</option>
-					<option value="">Иностранные языки</option>
-					<option value="">Литература</option>
-				</select>
-			</div>
+            <div class="question-container" id="exams">
+                <label for="question-3">
+                    ЕГЭ по каким предметам вы сдавали (3-4 предмета)?
+                </label>
+                <select id="question-3" multiple size="10">
+                    <option value="">Математика профильного уровня</option>
+                    <option value="">Физика</option>
+                    <option value="">Химия</option>
+                    <option value="">История</option>
+                    <option value="">Обществознание</option>
+                    <option value="">Информатика</option>
+                    <option value="">Биология</option>
+                    <option value="">География</option>
+                    <option value="">Иностранные языки</option>
+                    <option value="">Литература</option>
+                </select>
+            </div>
 
-			<div class="question-container" id="form">
-				<label for="question-4">Выберите форму обучения:</label>
-				<select id="question-4">
-					<option value="" selected>Очная</option>
-					<option value="">Заочная</option>
-					<option value="">Очно-заочная</option>
-					<option value="">Любая</option>
-				</select>
-			</div>
+            <div class="question-container" id="form">
+                <label for="question-4">Выберите форму обучения:</label>
+                <select id="question-4">
+                    <option value="" selected>Очная</option>
+                    <option value="">Заочная</option>
+                    <option value="">Очно-заочная</option>
+                    <option value="">Любая</option>
+                </select>
+            </div>
 
-			<div class="question-container" id="field">
-				<label for="question-5">
-					В какой сфере деятельности вы хотели бы работать?
-				</label>
-				<select id="question-5">
-					<option value="">Политическая</option>
-					<option value="">Бизнес</option>
-					<option value="">
-						Воспитательскую и преподавательскую деятельность
-					</option>
-					<option value="">Искусство и творчество</option>
-					<option value="">Медицина</option>
-				</select>
-			</div>
-		</section>
-	</body>
+            <div class="question-container" id="field">
+                <label for="question-5">
+                    В какой сфере деятельности вы хотели бы работать?
+                </label>
+                <select id="question-5">
+                    <option value="">Политическая</option>
+                    <option value="">Бизнес</option>
+                    <option value="">
+                        Воспитательскую и преподавательскую деятельность
+                    </option>
+                    <option value="">Искусство и творчество</option>
+                    <option value="">Медицина</option>
+                </select>
+            </div>
+        </section>
+    </body>
 </html>

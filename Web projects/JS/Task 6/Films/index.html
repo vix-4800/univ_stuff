@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Films</title>
         <script src="main.js" defer></script>
+        <script src="results.js" defer></script>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body class="light-theme">
@@ -155,7 +156,9 @@
                     <option value="western">Western</option>
                 </select>
 
-                <label for="duration"> Choose preferred duration of a movie: </label>
+                <label for="duration">
+                    Choose preferred duration of a movie:
+                </label>
                 <select name="duration" id="duration">
                     <option value="any" selected>Any duration</option>
                     <option value="long">> 120 min</option>
@@ -176,7 +179,8 @@
                 </select>
             </form>
 
-            <button onclick="getResults();">Find movies</button>
+            <button onclick="setResults();">Find movies</button>
+            <button onclick="getResults();">Previous results</button>
             <div id="results">
                 <h3 id="areResults"></h3>
                 <p id="movies"></p>
@@ -184,12 +188,3 @@
         </main>
     </body>
 </html>
-
-<!-- 
-Страна производства
-фильм сериал
-Год
-Жанр
-Продолжительность
-Рейтинг
- -->
